@@ -1,0 +1,15 @@
+﻿  stdafx.cpp
+  ApplicationMedical.cpp
+  Attribut.cpp
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\attribut.cpp(1): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  AttributDouble.cpp
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\attributdouble.cpp(1): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  AttributString.cpp
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\attributstring.cpp(1): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Empreinte.cpp
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\empreinte.cpp(1): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  GestionDonnees.cpp
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(1): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Maladie.cpp
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\maladie.cpp(1): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Generating Code...
