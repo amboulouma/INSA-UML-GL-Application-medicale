@@ -15,7 +15,9 @@ private:
 	string nom;
 	Empreinte empreinteMoyenne;
 public:
+	Maladie();
 	Maladie(string nom, Empreinte empreinteMoyenne);
+	Maladie();
 	double presence(Empreinte empreinte);
 };
 
