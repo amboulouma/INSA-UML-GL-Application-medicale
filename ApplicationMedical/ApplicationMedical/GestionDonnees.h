@@ -1,18 +1,28 @@
-// AttributDouble.h
-#include "Attribut.h"
+// GestionDonnees.h
 #include <string>
+#include <list>
+#include <unordered_map>
 
-#ifndef AttributDouble_H
-#define AttributDouble_H
+#include "Attribut.h"
+#include "Maladie.h"
+
+#ifndef GestionDonnees_H
+#define GestionDonnees_H
 
 using namespace std;
 
-class AttributDouble : public Attribut
+class GestionDonnees
 {
-private:
-	double data;
-public:
-	double distance(AttributDouble attributDouble);
+	private:
+		const string FICHIER_MALADIE;
+		const string FICHIER_EMPREINTES;
+		list<Maladie> listMaladie;
+	
+	public:
+		unordered_map<string, double> analyse(Empreinte e);
+		void analyse(list<Empreinte> listeEmpreintes);
+		void associerMaladieEmpreinte(string maladie, Empreinte e);
+		Empreinte trouverEmpreinteParID(int id);
 };
 
 #endif

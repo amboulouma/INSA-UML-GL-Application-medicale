@@ -18,8 +18,8 @@ class Empreinte
 		static list<int> modele;
 
 	public:
-		double Distance(Empreinte e);
-		void SauvegarderEmpreinte();
+		double distance(Empreinte e);
+		void sauvegarderEmpreinte();
 };
 
 #endif
