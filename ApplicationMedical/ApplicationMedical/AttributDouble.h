@@ -1,5 +1,4 @@
 // AttributDouble.h
-#include <string>
 #include "Attribut.h"
 
 #ifndef AttributDouble_H
