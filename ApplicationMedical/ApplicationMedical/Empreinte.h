@@ -13,8 +13,8 @@ class Empreinte
 	protected:
 		int NoID;
 		list<Attribut*> listeAttributs;
-		static const string FICHIER_EMPREINTES;
-		static const string FICHIER_METADONNEES;
+		static const string FICHIER_EMPREINTES = "Empreintes.txt";
+		static const string FICHIER_METADONNEES = "Metadonnees.txt";
 		static list<int> modele;
 
 	public:
