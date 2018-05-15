@@ -1,6 +1,7 @@
-#pragma once
 // Attribut.h
 #include <string>
+
+
 #ifndef Attribut_H
 #define Attribut_H
 
