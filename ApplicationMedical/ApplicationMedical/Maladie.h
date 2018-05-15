@@ -24,7 +24,7 @@ class Maladie
 
 		Maladie(string nom, Empreinte empreinteMoyenne);
 
-		Maladie();
+		~Maladie();
 
 		double presence(Empreinte empreinte);
 };
