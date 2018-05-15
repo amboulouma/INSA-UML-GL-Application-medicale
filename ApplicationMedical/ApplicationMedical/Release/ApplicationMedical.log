@@ -1,0 +1,11 @@
+﻿  Attribut.cpp
+  AttributDouble.cpp
+  AttributString.cpp
+  Empreinte.cpp
+Empreinte.cpp(1): fatal error C1010: fin de fichier inattendue lors de la recherche d'un en-tête précompilé. N'auriez-vous pas oublié d'ajouter '#include "stdafx.h"' à votre source ?
+  GestionDonnees.cpp
+GestionDonnees.cpp(1): fatal error C1010: fin de fichier inattendue lors de la recherche d'un en-tête précompilé. N'auriez-vous pas oublié d'ajouter '#include "stdafx.h"' à votre source ?
+  Maladie.cpp
+\\servif-home\homes\xcao\mes documents\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\Maladie.h(27): error C2535: 'Maladie::Maladie(void)' : fonction membre déjà définie ou déclarée
+  \\servif-home\homes\xcao\mes documents\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\Maladie.h(23): note: voir la déclaration de 'Maladie::Maladie'
+Maladie.cpp(11): error C2600: 'Maladie::~Maladie' : impossible de définir une fonction membre spéciale générée par le compilateur (doit être déclarée d'abord dans la classe)

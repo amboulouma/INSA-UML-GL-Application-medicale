@@ -1,7 +1,7 @@
+#include "stdafx.h"
 // AttributString.h
 #include <string>
 #include "Attribut.h"
-#include "stdafx.h"
 
 #ifndef AttributString_H
 #define AttributString_H

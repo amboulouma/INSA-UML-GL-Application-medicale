@@ -1,6 +1,7 @@
+#include "stdafx.h"
+
 // AttributDouble.h
 #include "Attribut.h"
-#include "stdafx.h"
 
 
 #ifndef AttributDouble_H

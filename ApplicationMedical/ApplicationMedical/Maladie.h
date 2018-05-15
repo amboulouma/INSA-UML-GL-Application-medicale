@@ -1,8 +1,9 @@
+#include "stdafx.h"
+
 // Maladie.h
 #include <string>
 
 #include "Empreinte.h"
-#include "stdafx.h"
 
 #ifndef Maladie_H
 #define Maladie_H
