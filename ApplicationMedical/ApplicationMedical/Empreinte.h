@@ -3,6 +3,9 @@
 #include <string>
 #include <list>
 #include "Attribut.h"
+#include "stdafx.h"
+
+
 #ifndef Empreinte_H
 #define Empreinte_H
 
@@ -13,8 +16,8 @@ class Empreinte
 	protected:
 		int NoID;
 		list<Attribut*> listeAttributs;
-		static const string FICHIER_EMPREINTES = "Empreintes.txt";
-		static const string FICHIER_METADONNEES = "Metadonnees.txt";
+		static const string FICHIER_EMPREINTES;
+		static const string FICHIER_METADONNEES;
 		static list<int> modele;
 
 	public:
