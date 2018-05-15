@@ -13,6 +13,7 @@ class AttributString: public Attribut
 	private:
 		string data;
 	public:
+		AttributString(string nom, string data);
 		double distance(AttributString attributString);
 };
 

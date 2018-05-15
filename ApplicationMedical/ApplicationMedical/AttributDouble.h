@@ -10,10 +10,11 @@ using namespace std;
 
 class AttributDouble : public Attribut
 {
-private:
-	double data;
-public:
-	double distance(AttributDouble attributDouble);
+	private:
+		double data;
+	public:
+		AttributDouble(string nom, double data);
+		double distance(AttributDouble attributDouble);
 };
 
 #endif
