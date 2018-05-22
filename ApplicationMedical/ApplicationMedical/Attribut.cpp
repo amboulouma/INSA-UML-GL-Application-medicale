@@ -4,5 +4,3 @@
 #include "Attribut.h"
 
 using namespace std;
-
-
