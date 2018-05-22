@@ -12,6 +12,9 @@ class Attribut
 {
 	protected :
 		string nom;
+
+	public :
+		virtual double distance(Attribut attribut);
 };
 
 #endif
