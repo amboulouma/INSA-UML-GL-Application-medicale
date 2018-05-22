@@ -2,7 +2,9 @@
 // Empreinte.h
 #include <string>
 #include <list>
+#include <vector>
 #include "Attribut.h"
+#include "AttributString.h"
 #include "stdafx.h"
 
 
@@ -15,10 +17,10 @@ class Empreinte
 {
 	protected:
 		int NoID;
-		list<Attribut*> listeAttributs;
+		vector<Attribut*> listeAttributs;
 		static const string FICHIER_EMPREINTES;
 		static const string FICHIER_METADONNEES;
-		static list<int> modele;
+		static vector<int> modele;
 
 	public:
 		Empreinte();
