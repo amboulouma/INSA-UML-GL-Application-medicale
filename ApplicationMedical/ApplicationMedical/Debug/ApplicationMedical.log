@@ -1,5 +1,11 @@
-﻿AttributDouble.obj : error LNK2001: symbole externe non résolu "public: virtual double __thiscall Attribut::distance(class Attribut)" (?distance@Attribut@@UAENV1@@Z)
-AttributString.obj : error LNK2001: symbole externe non résolu "public: virtual double __thiscall Attribut::distance(class Attribut)" (?distance@Attribut@@UAENV1@@Z)
-Empreinte.obj : error LNK2001: symbole externe non résolu "public: virtual double __thiscall Attribut::distance(class Attribut)" (?distance@Attribut@@UAENV1@@Z)
-Empreinte.obj : error LNK2001: symbole externe non résolu "protected: static class std::vector<int,class std::allocator<int> > Empreinte::modele" (?modele@Empreinte@@1V?$vector@HV?$allocator@H@std@@@std@@A)
-\\servif-home\homes\cflorant\Mes documents\repos\INSA-UML-GL-Application-medicale\ApplicationMedical\Debug\ApplicationMedical.exe : fatal error LNK1120: 2 externes non résolus
+﻿  stdafx.cpp
+  Maladie.cpp
+  GestionDonnees.cpp
+  Empreinte.cpp
+  AttributString.cpp
+  AttributDouble.cpp
+  Attribut.cpp
+  ApplicationMedical.cpp
+  Génération de code en cours...
+  ApplicationMedical.vcxproj -> \\servif-home\homes\cflorant\Mes documents\repos\INSA-UML-GL-Application-medicale\ApplicationMedical\Debug\ApplicationMedical.exe
+  ApplicationMedical.vcxproj -> \\servif-home\homes\cflorant\Mes documents\repos\INSA-UML-GL-Application-medicale\ApplicationMedical\Debug\ApplicationMedical.pdb (Full PDB)
