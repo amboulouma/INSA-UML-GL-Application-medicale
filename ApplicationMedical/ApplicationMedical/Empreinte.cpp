@@ -35,11 +35,6 @@ Empreinte::Empreinte(int id, vector<Attribut*> liste) : listeAttributs(liste)
 
 Empreinte::~Empreinte()
 {
-	for (vector<Attribut*>::iterator it = listeAttributs.begin()
-		; it != listeAttributs.end(); ++it)
-	{
-		delete *it;
-	}
 }
 
 double Empreinte::distance(Empreinte e)
