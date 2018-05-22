@@ -14,7 +14,7 @@ class Attribut
 		string nom;
 
 	public :
-		virtual double distance(Attribut attribut);
+		virtual double distance(Attribut * attribut) = 0;
 };
 
 #endif

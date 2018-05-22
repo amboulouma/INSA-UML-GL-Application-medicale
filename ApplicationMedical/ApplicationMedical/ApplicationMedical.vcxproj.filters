@@ -25,6 +25,9 @@
     <Text Include="Metadonnees.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
+    <Text Include="meta.txt">
+      <Filter>Fichiers sources</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
