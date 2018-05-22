@@ -21,6 +21,12 @@ class Empreinte
 		static list<int> modele;
 
 	public:
+		Empreinte();
+
+		Empreinte(int id, list<Attribut*> liste);
+
+		~Empreinte();
+
 		double distance(Empreinte e);
 		void sauvegarderEmpreinte();
 };
