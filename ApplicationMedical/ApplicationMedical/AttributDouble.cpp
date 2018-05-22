@@ -14,8 +14,9 @@ AttributDouble::AttributDouble(string nom, double data)
 
 AttributDouble::~AttributDouble() { }
 
-double AttributDouble::distance(AttributDouble attributDouble)
+double AttributDouble::distance(Attribut attribut)
 {
+	AttributDouble attributDouble = *dynamic_cast<AttributDouble*>(&attribut);
 	double distance = 0.0;
 	if (this->data != attributDouble.data)
 		distance = 1.0;
