@@ -5,13 +5,13 @@ Maladie::Maladie() { }
 
 Maladie::Maladie(string nom, Empreinte empreinteMoyenne) 
 {
-
+	this->nom = nom;
+	this->empreinteMoyenne = empreinteMoyenne;
 }
 
 Maladie::~Maladie() { }
 
 double Maladie::presence(Empreinte empreinte)
 {
-	double presence;
-	return presence;
+	return 1 - this->empreinteMoyenne.distance(empreinte);
 }
