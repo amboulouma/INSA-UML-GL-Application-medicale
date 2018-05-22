@@ -8,13 +8,16 @@ AttributDouble::AttributDouble() { }
 
 AttributDouble::AttributDouble(string nom, double data) 
 {
-	//cout << "Attribut double en cours de création" << endl;
+	this->nom = nom;
+	this->data = data;
 }
 
 AttributDouble::~AttributDouble() { }
 
 double AttributDouble::distance(AttributDouble attributDouble)
 {
-	double distance;
+	double distance = 0.0;
+	if (this->data != attributDouble.data)
+		distance = 1.0;
 	return distance;
 }
