@@ -13,7 +13,7 @@ Empreinte::Empreinte(int id, list<Attribut*> liste) : listeAttributs(liste)
 
 Empreinte::~Empreinte()
 {
-	for (list<Attribut*>::iterator it = listeAttributs.begin()
+	for (vector<Attribut*>::iterator it = listeAttributs.begin()
 		; it != listeAttributs.end(); ++it)
 	{
 		delete *it;
@@ -22,6 +22,11 @@ Empreinte::~Empreinte()
 
 double Empreinte::distance(Empreinte e)
 {
-	double d;
-	
+	double d = 0;
+	vector<Attribut*> list1 = e.listeAttributs;
+	for (int i = 0; i < modele.size(); i++) 
+	{
+		d = d + listeAttributs[i]->distance(*list1[i]);
+	}
+	return d;
 }
