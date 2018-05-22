@@ -22,7 +22,7 @@ class AttributString: public Attribut
 
 		~AttributString();
 
-		double distance(Attribut attribut);
+		double distance(Attribut * attribut);
 };
 
 #endif

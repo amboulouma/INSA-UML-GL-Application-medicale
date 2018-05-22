@@ -147,6 +147,7 @@
     <Text Include="Maladies.txt" />
     <Text Include="Metadonnees.txt" />
     <Text Include="ReadMe.txt" />
+    <Text Include="meta.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AttributDouble.h" />

@@ -5,6 +5,7 @@
 #include <vector>
 #include "Attribut.h"
 #include "AttributString.h"
+#include "AttributDouble.h"
 #include "stdafx.h"
 
 
