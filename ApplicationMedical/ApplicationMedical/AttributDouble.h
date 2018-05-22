@@ -1,6 +1,7 @@
+#include "stdafx.h"
+
 // AttributDouble.h
 #include "Attribut.h"
-#include "stdafx.h"
 
 
 #ifndef AttributDouble_H
@@ -10,10 +11,19 @@ using namespace std;
 
 class AttributDouble : public Attribut
 {
-private:
-	double data;
-public:
-	double distance(AttributDouble attributDouble);
+	private:
+
+		double data;
+
+	public:
+
+		AttributDouble();
+
+		AttributDouble(string nom, double data);
+
+		~AttributDouble();
+
+		double distance(AttributDouble attributDouble);
 };
 
 #endif
