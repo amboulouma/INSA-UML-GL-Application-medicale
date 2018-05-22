@@ -25,7 +25,7 @@ class Empreinte
 	public:
 		Empreinte();
 
-		Empreinte(int id, list<Attribut*> liste);
+		Empreinte(int id, vector<Attribut*> list);
 
 		~Empreinte();
 
