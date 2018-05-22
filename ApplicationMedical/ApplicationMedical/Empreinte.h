@@ -3,6 +3,9 @@
 #include <string>
 #include <list>
 #include "Attribut.h"
+#include "stdafx.h"
+
+
 #ifndef Empreinte_H
 #define Empreinte_H
 

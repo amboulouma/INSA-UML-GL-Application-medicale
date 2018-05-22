@@ -3,6 +3,7 @@
 #include <list>
 #include <unordered_map>
 
+#include "stdafx.h"
 #include "Attribut.h"
 #include "Maladie.h"
 
@@ -14,8 +15,8 @@ using namespace std;
 class GestionDonnees
 {
 	private:
-		const string FICHIER_MALADIE;
-		const string FICHIER_EMPREINTES;
+		const string FICHIER_MALADIE = "Maladies.txt";
+		const string FICHIER_EMPREINTES = "Empreintes.txt";
 		list<Maladie> listMaladie;
 	
 	public:
