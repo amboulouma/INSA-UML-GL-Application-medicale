@@ -26,7 +26,7 @@ class GestionDonnees
 
 	~GestionDonnees();
 
-	unordered_map<string, double> analyse(Empreinte e);
+	void analyse(Empreinte e);
 	void analyse(list<Empreinte> listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
 	Empreinte trouverEmpreinteParID(int id);
