@@ -22,7 +22,11 @@ class AttributString: public Attribut
 
 		~AttributString();
 
+		string getData();
+		
 		double distance(Attribut * attribut);
+
+
 };
 
 #endif

@@ -22,8 +22,6 @@ class GestionDonnees
   public:
 	GestionDonnees();
 
-	GestionDonnees(list<Maladie> listMaladie);
-
 	~GestionDonnees();
 
 	void analyse(Empreinte e);

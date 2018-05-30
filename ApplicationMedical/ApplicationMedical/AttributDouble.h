@@ -23,6 +23,8 @@ class AttributDouble : public Attribut
 
 		~AttributDouble();
 
+		double getData();
+
 		double distance(Attribut * attribut);
 };
 

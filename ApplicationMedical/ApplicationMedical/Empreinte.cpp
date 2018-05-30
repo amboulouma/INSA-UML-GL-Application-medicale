@@ -3,8 +3,8 @@
 
 using namespace std;
 
-const string Empreinte::FICHIER_METADONNEES = "meta.txt";
-const string Empreinte::FICHIER_EMPREINTES = "empreinte.txt";
+const string Empreinte::FICHIER_METADONNEES = "Metadonnees.txt";
+const string Empreinte::FICHIER_EMPREINTES = "Empreintes.txt";
 vector<int> Empreinte::modele;
 
 Empreinte::Empreinte() {}
@@ -53,4 +53,26 @@ double Empreinte::distance(Empreinte e)
 		}
 	}
 	return d;
+}
+
+void Empreinte::sauvegarderEmpreinte()
+{
+	ofstream os;
+	os.open(FICHIER_EMPREINTES, std::ofstream::out | std::ofstream::app);
+	os << NoID;
+	for (int i = 0; i < listeAttributs.size(); i++)
+	{
+		if (modele[i]==0)
+		{
+			AttributString* as = dynamic_cast<AttributString*>(listeAttributs[i]);
+			os << ";" << as->getData();
+		} 
+		else
+		{
+			AttributDouble* ad = dynamic_cast<AttributDouble*>(listeAttributs[i]);
+			os << ";" << ad->getData();
+		}
+	}
+	os << endl;
+	os.close();
 }

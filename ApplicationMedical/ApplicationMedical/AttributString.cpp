@@ -11,6 +11,11 @@ AttributString::AttributString(string nom, string data)
 
 AttributString::~AttributString() { }
 
+string AttributString::getData()
+{
+	return data;
+}
+
 double AttributString::distance(Attribut * attribut)
 {
 	AttributString attributString = *dynamic_cast<AttributString*>(attribut);
