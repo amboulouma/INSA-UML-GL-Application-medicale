@@ -17,7 +17,7 @@ class GestionDonnees
   private:
 	const string FICHIER_MALADIE = "Maladies.txt";
 	const string FICHIER_EMPREINTES = "Empreintes.txt";
-	list<Maladie> listMaladie;
+	static list<Maladie> listMaladie;
 
   public:
 	GestionDonnees();

@@ -1,15 +1,15 @@
 #include "stdafx.h"
 #include "Maladie.h"
 
-Maladie::Maladie() { }
+Maladie::Maladie() {}
 
-Maladie::Maladie(string nom, Empreinte empreinteMoyenne) 
+Maladie::Maladie(string nom, Empreinte empreinteMoyenne)
 {
 	this->nom = nom;
 	this->empreinteMoyenne = empreinteMoyenne;
 }
 
-Maladie::~Maladie() { }
+Maladie::~Maladie() {}
 
 double Maladie::presence(Empreinte empreinte)
 {
