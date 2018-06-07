@@ -6,6 +6,7 @@ using namespace std;
 const string Empreinte::FICHIER_METADONNEES = "Metadonnees.txt";
 const string Empreinte::FICHIER_EMPREINTES = "Empreintes.txt";
 vector<int> Empreinte::modele;
+vector<string> Empreinte::nomAttribut;
 
 Empreinte::Empreinte() {}
 
@@ -20,13 +21,16 @@ Empreinte::Empreinte(int id, vector<Attribut*> liste) : listeAttributs(liste)
 		{
 			int pos = line.find(';');
 			string type = line.substr(pos + 1);
+			string nomAtt = line.substr(0, pos);
 			if (type == "string") 
 			{
 				Empreinte::modele.push_back(0);
+				Empreinte::nomAttribut.push_back(nomAtt);
 			} 
 			else if (type == "double")
 			{
 				Empreinte::modele.push_back(1);
+				Empreinte::nomAttribut.push_back(nomAtt);
 			}
 		}
 		is.close();
@@ -53,6 +57,7 @@ double Empreinte::distance(Empreinte e)
 		}
 		
 	}
+	d = d / modele.size();
 	return d;
 }
 
@@ -76,4 +81,14 @@ void Empreinte::sauvegarderEmpreinte()
 	}
 	os << endl;
 	os.close();
+}
+
+int Empreinte::getID()
+{
+	return NoID;
+}
+
+vector<Attribut*> Empreinte::getListeAttributs()
+{
+	return listeAttributs;
 }

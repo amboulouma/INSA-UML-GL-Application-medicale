@@ -15,3 +15,13 @@ double Maladie::presence(Empreinte empreinte)
 {
 	return 1 - this->empreinteMoyenne.distance(empreinte);
 }
+
+string Maladie::getNom()
+{
+	return nom;
+}
+
+Empreinte Maladie::getEmpreinteMoyenne()
+{
+	return empreinteMoyenne;
+}

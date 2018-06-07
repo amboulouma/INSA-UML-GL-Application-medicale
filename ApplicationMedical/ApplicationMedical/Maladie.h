@@ -12,11 +12,15 @@ using namespace std;
 
 class Maladie
 {
+	friend class GestionDonnees;
+
 	private:
 
 		string nom;
 
 		Empreinte empreinteMoyenne;
+
+		int n;
 
 	public:
 
@@ -27,6 +31,10 @@ class Maladie
 		~Maladie();
 
 		double presence(Empreinte empreinte);
+
+		string getNom();
+
+		Empreinte getEmpreinteMoyenne();
 };
 
 #endif

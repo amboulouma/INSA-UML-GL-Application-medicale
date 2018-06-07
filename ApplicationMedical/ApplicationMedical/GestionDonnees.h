@@ -24,9 +24,10 @@ class GestionDonnees
 
 	~GestionDonnees();
 
-	void analyse(Empreinte e);
+	unordered_map<string,double> analyse(Empreinte e);
 	void analyse(list<Empreinte> listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
+	vector<string> splitLine(string line, char separator);
 	Empreinte trouverEmpreinteParID(int id);
 };
 
