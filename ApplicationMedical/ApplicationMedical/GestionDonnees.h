@@ -17,13 +17,14 @@ class GestionDonnees
   private:
 	const string FICHIER_MALADIE = "Maladies.txt";
 	const string FICHIER_EMPREINTES = "Empreintes.txt";
-	static list<Maladie> listMaladie;
+	list<Maladie> listMaladie;
 
   public:
 	GestionDonnees();
 
 	~GestionDonnees();
-
+	
+	void genererListeMaladie();
 	unordered_map<string,double> analyse(Empreinte e);
 	void analyse(list<Empreinte> listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);

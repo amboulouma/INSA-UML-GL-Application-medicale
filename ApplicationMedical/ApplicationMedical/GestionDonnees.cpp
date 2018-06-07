@@ -8,6 +8,13 @@ using namespace std;
 
 GestionDonnees::GestionDonnees() 
 {
+	genererListeMaladie();
+}
+
+GestionDonnees::~GestionDonnees() {}
+
+void GestionDonnees::genererListeMaladie()
+{
 	if (Empreinte::modele.empty())
 	{
 		string line;
@@ -30,6 +37,8 @@ GestionDonnees::GestionDonnees()
 		}
 		is1.close();
 	}
+
+	listMaladie.clear();
 
 	ifstream is;
 	is.open(FICHIER_MALADIE);
@@ -56,11 +65,11 @@ GestionDonnees::GestionDonnees()
 		}
 		for (int i = 1; i < attribut.size() - 1; i++)
 		{
-			if (Empreinte::modele[i-1] == 1)
+			if (Empreinte::modele[i - 1] == 1)
 			{
 				sum[nomMaladie][i] += stod(attribut[i]);
 			}
-			else if (Empreinte::modele[i-1] == 0)
+			else if (Empreinte::modele[i - 1] == 0)
 			{
 				sum[nomMaladie][i] = -1;
 				stringMoy[nomMaladie][i] = attribut[i];
@@ -72,14 +81,14 @@ GestionDonnees::GestionDonnees()
 	{
 		vector<Attribut*> list;
 		string nomMaladie = i->first;
-		for (int j = 0; j < Empreinte::modele.size(); j++) 
+		for (int j = 0; j < Empreinte::modele.size(); j++)
 		{
-			if (Empreinte::modele[j] == 0) 
+			if (Empreinte::modele[j] == 0)
 			{
-				Attribut* a = new AttributString(Empreinte::nomAttribut[j],stringMoy[nomMaladie][j+1]);
+				Attribut* a = new AttributString(Empreinte::nomAttribut[j], stringMoy[nomMaladie][j + 1]);
 				list.push_back(a);
-			} 
-			else if (Empreinte::modele[j] == 1) 
+			}
+			else if (Empreinte::modele[j] == 1)
 			{
 				double moy = sum[nomMaladie][j + 1] / n[nomMaladie];
 				Attribut* a = new AttributDouble(Empreinte::nomAttribut[j], moy);
@@ -91,8 +100,6 @@ GestionDonnees::GestionDonnees()
 		listMaladie.push_back(m);
 	}
 }
-
-GestionDonnees::~GestionDonnees() {}
 
 unordered_map<string, double> GestionDonnees::analyse(Empreinte e)
 {
@@ -140,6 +147,7 @@ void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte e)
 	}
 	os << ";" << maladie << endl;
 	os.close();
+	genererListeMaladie();
 }
 
 vector<string> GestionDonnees::splitLine(string line, char c = ' ')
@@ -157,4 +165,38 @@ vector<string> GestionDonnees::splitLine(string line, char c = ' ')
 	} while (0 != *str++);
 
 	return result;
+}
+
+Empreinte GestionDonnees::trouverEmpreinteParID(int id)
+{
+	ifstream is(Empreinte::FICHIER_EMPREINTES);
+	string line;
+	getline(is, line);
+	while (getline(is, line))
+	{
+		string idEmpreinteString = line.substr(0, line.find(';'));
+		int idEmpreinte = stoi(idEmpreinteString);
+		if (idEmpreinte == id)
+		{
+			vector<string> attribut = splitLine(line, ';');
+			vector<Attribut*> liste;
+			for (int i = 0; i < Empreinte::modele.size(); i++)
+			{
+				if (Empreinte::modele[i] == 0)
+				{
+					Attribut* a = new AttributString(Empreinte::nomAttribut[i],attribut[i+1]);
+					liste.push_back(a);
+				}
+				else if (Empreinte::modele[i] == 1)
+				{
+					int val = stod(attribut[i + 1]);
+					Attribut* a = new AttributDouble(Empreinte::nomAttribut[i], val);
+					liste.push_back(a);
+				}
+			}
+			Empreinte e(idEmpreinte, liste);
+			return e;
+		}
+		
+	}
 }

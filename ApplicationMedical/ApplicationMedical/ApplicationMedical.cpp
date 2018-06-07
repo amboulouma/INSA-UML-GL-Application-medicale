@@ -61,15 +61,15 @@ int main()
 
 
 	vector<Attribut*> list1;
-	Attribut * a1 = new AttributString("A1", "True");
+	Attribut * a1 = new AttributString("A1", "False");
 	list1.push_back(a1);
-	Attribut * a2 = new AttributDouble("A2", 7.06);
+	Attribut * a2 = new AttributDouble("A2", 7.8);
 	list1.push_back(a2);
-	Attribut * a3 = new AttributDouble("A3", 79);
+	Attribut * a3 = new AttributDouble("A3", 80);
 	list1.push_back(a3);
 	Attribut * a4 = new AttributDouble("A4", 7.628);
 	list1.push_back(a4);
-	Attribut * a5 = new AttributDouble("AZ51", 623.5);
+	Attribut * a5 = new AttributDouble("AZ51", 68.5);
 	list1.push_back(a5);
 	Empreinte e(1, list1);
 
@@ -77,6 +77,9 @@ int main()
 
 	unordered_map<string, double> res = gd.analyse(e);
 	gd.associerMaladieEmpreinte("Maladie1", e);
+
+	Empreinte e1 = gd.trouverEmpreinteParID(2);
+
 	return 0;
 }
 

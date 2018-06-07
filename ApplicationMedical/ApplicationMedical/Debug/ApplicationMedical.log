@@ -1,7 +1,2 @@
-﻿  GestionDonnees.cpp
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(52): warning C4018: '<': signed/unsigned mismatch
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(57): warning C4018: '<': signed/unsigned mismatch
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(75): warning C4018: '<': signed/unsigned mismatch
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(89): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(128): warning C4018: '<': signed/unsigned mismatch
+﻿  ApplicationMedical.cpp
   ApplicationMedical.vcxproj -> D:\GLUML\INSA-UML-GL-Application-medicale\ApplicationMedical\Debug\ApplicationMedical.exe
