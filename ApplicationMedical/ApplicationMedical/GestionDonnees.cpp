@@ -27,18 +27,21 @@ void GestionDonnees::defModele()
 
 void GestionDonnees::calculerMaladies()
 {
+
 	GestionFichier gf;
 	listMaladie.clear();
 	unordered_map<string, Empreinte> liste;
 	gf.lireBD(liste, modele);
+	std::cout << "lol" << std::endl;
 	for (auto i = liste.begin(); i != liste.end(); ++i)
 	{
+		std::cout << "Coucou" << std::endl;
 		Maladie m(i->first, i->second);
 		listMaladie.push_back(m);
 	}
 }
 
-unordered_map<string, double> GestionDonnees::analyse(const Empreinte &e)
+void GestionDonnees::analyse(const Empreinte &e)
 {
 	unordered_map<string, double> resultat;
 	for (Maladie m : listMaladie)
@@ -47,19 +50,18 @@ unordered_map<string, double> GestionDonnees::analyse(const Empreinte &e)
 		resultat.insert(make_pair(m.getNom(), probab));
 	}
 
-	return resultat;
+	cout << e.getID() << endl;
+	for (auto i = resultat.begin(); i != resultat.end(); ++i)
+	{
+		cout << "     Maladie: " << i->first << " | Probabilite: " << i->second << endl;
+	}
 }
 
-void GestionDonnees::analyse(const list<Empreinte> &listeEmpreintes)
+void GestionDonnees::analyse(const list<Empreinte> listeEmpreintes)
 {
 	for (Empreinte e : listeEmpreintes)
 	{
-		unordered_map<string, double> resultat = analyse(e);
-		cout << e.getID() << endl;
-		for (auto i = resultat.begin(); i != resultat.end(); ++i)
-		{
-			cout << "     Maladie: " << i->first << " | Probabilite: " << i->second << endl;
-		}
+		analyse(e);
 	}
 }
 
@@ -119,6 +121,35 @@ void GestionDonnees::getModele(vector<int> &schema)
 	{
 		schema.push_back(*it);
 	}
+}
+
+void GestionDonnees::getNomsAttributs(vector<string> &noms)
+{
+	vector<string>::iterator it;
+	for (it = nomAttribut.begin(); it != nomAttribut.end(); ++it)
+	{
+		noms.push_back(*it);
+	}
+}
+
+string GestionDonnees::getFichierMaladie()
+{
+	return FICHIER_MALADIE;
+}
+
+string GestionDonnees::getFichierEmpreintes()
+{
+	return FICHIER_EMPREINTES;
+}
+
+void GestionDonnees::setFichierMaladie(const string &fichierMaladie)
+{
+	FICHIER_MALADIE = fichierMaladie;
+}
+
+void GestionDonnees::setFichierEmpreintes(const string &fichierEmpreintes)
+{
+	FICHIER_EMPREINTES = fichierEmpreintes;
 }
 
 void GestionDonnees::affichageMaladies()

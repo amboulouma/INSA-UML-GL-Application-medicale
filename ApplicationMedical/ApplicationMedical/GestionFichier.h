@@ -14,10 +14,11 @@ using namespace std;
 
 class GestionFichier
 {
-  private:
-	const string DEF_EMPREINTE = "Metadonnees.txt";
-	const string BD_MALADIE = "Maladies.txt";
-	const string ANALYSE_EMPREINTE = "Empreintes.txt";
+private:
+	string DEF_EMPREINTE = "Metadonnees.txt";
+	string BD_MALADIE = "Maladies.txt";
+	string ANALYSE_EMPREINTE = "Empreintes.txt";
+
 
   public:
 	GestionFichier();
@@ -31,6 +32,14 @@ class GestionFichier
 	void lireEmpreinte(vector<Empreinte> &, vector<int> modele, vector<string> nomAttribut);
 
 	vector<string> splitLine(string line, char separator);
+
+	string getDefEmpreinte();
+	string getBdMaladie();
+	string getAnalyseEmpreinte();
+
+	void setDefEmpreinte(const string & defEmpreinte);
+	void setBdMaladie(const string & bdMaladie);
+	void setAnalyseEmpreinte(const string & analyseEmpreinte);
 };
 
 #endif

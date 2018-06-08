@@ -1,6 +1,7 @@
 #include "GestionFichier.h"
 
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -34,11 +35,13 @@ void GestionFichier::ajouterDansBD(Empreinte& e, string nomMaladie, vector<int>&
 void GestionFichier::modeleEmpreinte(vector<string>& nomAttribut, vector<int>& modele)
 {
 	string line;
-	ifstream is(DEF_EMPREINTE);
-	while (getline(is, line))
+	ifstream is("./../ApplicationMedical/Metadonnees.txt");
+	while (is)
 	{
+		getline(is, line);
 		int pos = line.find(';');
 		string type = line.substr(pos + 1);
+		cout << type << endl;
 		string nomAtt = line.substr(0, pos);
 		if (type == "string")
 		{
@@ -164,4 +167,34 @@ vector<string> GestionFichier::splitLine(string line, char c = ' ')
 	} while (0 != *str++);
 
 	return result;
+}
+
+string GestionFichier::getDefEmpreinte()
+{
+	return DEF_EMPREINTE;
+}
+
+string GestionFichier::getBdMaladie()
+{
+	return BD_MALADIE;
+}
+
+string GestionFichier::getAnalyseEmpreinte()
+{
+	return ANALYSE_EMPREINTE;
+}
+
+void GestionFichier::setDefEmpreinte(const string & defEmpreinte)
+{
+	DEF_EMPREINTE = defEmpreinte;
+}
+
+void GestionFichier::setBdMaladie(const string & bdMaladie)
+{
+	BD_MALADIE = bdMaladie;
+}
+
+void GestionFichier::setAnalyseEmpreinte(const string & analyseEmpreinte)
+{
+	ANALYSE_EMPREINTE = analyseEmpreinte;
 }
