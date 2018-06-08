@@ -7,6 +7,7 @@
 #include "AttributDouble.h"
 #include "Empreinte.h"
 #include "GestionDonnees.h"
+#include "GestionFichier.h"
 #include <vector>
 #include <iostream>
 #include <map>
@@ -27,8 +28,16 @@ int main()
 	// Main
 
 	int choixMenu = 0, choixEmpreinte = 0, choixAjoutMaladie = 0;
+
 	GestionDonnees gestionDonnees;
-	GestionDonnees gestionFichiers;
+	GestionFichier gestionFichier;
+
+	Maladie maladie;
+	string nomMaladie = "";
+	int idEmpreinteMaladie;
+	Empreinte empreinteMaladie;
+	int nombreEmpreintes;
+	list<Empreinte> listeEmpreintesMaladie;
 
 	vector<Attribut *> listeAttributs;
 	Attribut *a1, *a2, *a3, *a4, *a5;
@@ -38,7 +47,7 @@ int main()
 
 	Empreinte empreinte;
 	int idEmpreinte = 1;
-	string maladie = "";
+	string maladieEmpreinte = "";
 
 	do
 	{
@@ -75,12 +84,26 @@ int main()
 				{
 				case 1:
 					cout << "Analyser une empreinte" << endl;
-
+					cout << "Choisir l'identifiant de l'empreinte à analyser" << endl;
+					gestionFichier.affichageEmpreintes();
+					cin >> idEmpreinteMaladie;
+					empreinteMaladie = gestionDonnees.trouverEmpreinteParID(idEmpreinteMaladie);
+					gestionDonnees.analyse(empreinteMaladie);
 					break;
 
 				case 2:
 					cout << "Analyser un ensemble d'empreinte" << endl;
-
+					cout << "Nombre d'empreinte à analyser : " << endl;
+					cin >> nombreEmpreintes;
+					cout << "Choisir les identifiants des empreintes à analyser" << endl;
+					gestionFichier.affichageEmpreintes();
+					for (int i; i < nombreEmpreintes; ++i)
+					{
+						cin >> idEmpreinteMaladie;
+						empreinteMaladie = gestionDonnees.trouverEmpreinteParID(idEmpreinteMaladie);
+						listeEmpreintesMaladie.push_back(empreinteMaladie);
+					}
+					gestionDonnees.analyse(listeEmpreintesMaladie);
 					break;
 
 				case 3:
@@ -100,11 +123,16 @@ int main()
 
 		case 2:
 			cout << "Afficher les maladies prises en compte" << endl;
-			gestionDonnees.affichageMaladies();
+			gestionFichier.affichageMaladies();
 			break;
 
 		case 3:
 			cout << "Afficher les caractéristiques d'une maladie" << endl;
+			cout << endl;
+			gestionFichier.affichageMaladies();
+			cout << "Entrez nom de de la maladie :";
+			cin >> nomMaladie;
+			//TODO
 			cout << endl;
 
 			break;
@@ -154,11 +182,11 @@ int main()
 			{
 			case 1:
 				cout << endl;
-				gestionDonnees.affichageMaladies();
+				gestionFichier.affichageMaladies();
 				cout << "Entrez nom de de la maladie :";
-				cin >> maladie;
-				gestionDonnees.associerMaladieEmpreinte(maladie, empreinte);
-				cout << "La maladie :" << maladie << " a bien été associée." << endl;
+				cin >> maladieEmpreinte;
+				gestionDonnees.associerMaladieEmpreinte(maladieEmpreinte, empreinte);
+				cout << "La maladie :" << maladieEmpreinte << " a bien été associée." << endl;
 				break;
 
 			case 2:

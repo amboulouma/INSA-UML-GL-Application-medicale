@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool Attribut::operator==(const Attribut & unAtt) 
+bool Attribut::operator==(const Attribut &unAtt)
 {
 	return false;
 }

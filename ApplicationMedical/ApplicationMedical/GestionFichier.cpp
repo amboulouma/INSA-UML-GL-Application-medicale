@@ -2,6 +2,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <set>
 
 using namespace std;
 
@@ -9,22 +10,22 @@ GestionFichier::GestionFichier() {}
 
 GestionFichier::~GestionFichier() {}
 
-void GestionFichier::ajouterDansBD(Empreinte& e, string nomMaladie, vector<int>& modele)
+void GestionFichier::ajouterDansBD(Empreinte &e, string nomMaladie, vector<int> &modele)
 {
 	ofstream os;
 	os.open(BD_MALADIE, ofstream::out | ofstream::app);
 	os << e.getID();
-	vector<Attribut*> listeAttributs = e.listeAttributs;
+	vector<Attribut *> listeAttributs = e.listeAttributs;
 	for (int i = 0; i < listeAttributs.size(); i++)
 	{
 		if (modele[i] == 0)
 		{
-			AttributString* as = dynamic_cast<AttributString*>(listeAttributs[i]);
+			AttributString *as = dynamic_cast<AttributString *>(listeAttributs[i]);
 			os << ";" << as->getData();
 		}
 		else
 		{
-			AttributDouble* ad = dynamic_cast<AttributDouble*>(listeAttributs[i]);
+			AttributDouble *ad = dynamic_cast<AttributDouble *>(listeAttributs[i]);
 			os << ";" << ad->getData();
 		}
 	}
@@ -32,7 +33,7 @@ void GestionFichier::ajouterDansBD(Empreinte& e, string nomMaladie, vector<int>&
 	os.close();
 }
 
-void GestionFichier::modeleEmpreinte(vector<string>& nomAttribut, vector<int>& modele)
+void GestionFichier::modeleEmpreinte(vector<string> &nomAttribut, vector<int> &modele)
 {
 	string line;
 	ifstream is("./../ApplicationMedical/Metadonnees.txt");
@@ -57,7 +58,7 @@ void GestionFichier::modeleEmpreinte(vector<string>& nomAttribut, vector<int>& m
 	is.close();
 }
 
-void GestionFichier::lireBD(unordered_map<string, Empreinte>& liste, vector<int>& modele)
+void GestionFichier::lireBD(unordered_map<string, Empreinte> &liste, vector<int> &modele)
 {
 	liste.clear();
 	ifstream is;
@@ -65,12 +66,12 @@ void GestionFichier::lireBD(unordered_map<string, Empreinte>& liste, vector<int>
 	string line;
 	getline(is, line);
 	vector<string> nomAttribut = splitLine(line, ';');
-	unordered_map<string, int> n; //nombre de presence d'une maladie dans le fichier
+	unordered_map<string, int> n;			   //nombre de presence d'une maladie dans le fichier
 	unordered_map<string, vector<double>> sum; //somme des donnees d'un attribut de meme maladie, sum = -1 si un attribut string
 	unordered_map<string, vector<string>> stringMoy;
 	while (getline(is, line))
 	{
-		vector<Attribut*> list;
+		vector<Attribut *> list;
 		vector<string> attribut = splitLine(line, ';');
 		string nomMaladie = attribut[attribut.size() - 1];
 		n[nomMaladie]++;
@@ -99,19 +100,19 @@ void GestionFichier::lireBD(unordered_map<string, Empreinte>& liste, vector<int>
 	is.close();
 	for (auto i = n.begin(); i != n.end(); ++i)
 	{
-		vector<Attribut*> list;
+		vector<Attribut *> list;
 		string nomMaladie = i->first;
 		for (int j = 0; j < modele.size(); j++)
 		{
 			if (modele[j] == 0)
 			{
-				Attribut* a = new AttributString(nomAttribut[j], stringMoy[nomMaladie][j + 1]);
+				Attribut *a = new AttributString(nomAttribut[j], stringMoy[nomMaladie][j + 1]);
 				list.push_back(a);
 			}
 			else if (modele[j] == 1)
 			{
 				double moy = sum[nomMaladie][j + 1] / n[nomMaladie];
-				Attribut* a = new AttributDouble(nomAttribut[j], moy);
+				Attribut *a = new AttributDouble(nomAttribut[j], moy);
 				list.push_back(a);
 			}
 		}
@@ -120,7 +121,7 @@ void GestionFichier::lireBD(unordered_map<string, Empreinte>& liste, vector<int>
 	}
 }
 
-void GestionFichier::lireEmpreinte(vector<Empreinte>& listEmpreinte, vector<int> modele, vector<string> nomAttribut)
+void GestionFichier::lireEmpreinte(vector<Empreinte> &listEmpreinte, vector<int> modele, vector<string> nomAttribut)
 {
 	listEmpreinte.clear();
 	ifstream is(ANALYSE_EMPREINTE);
@@ -131,18 +132,18 @@ void GestionFichier::lireEmpreinte(vector<Empreinte>& listEmpreinte, vector<int>
 		string idEmpreinteString = line.substr(0, line.find(';'));
 		int idEmpreinte = stoi(idEmpreinteString);
 		vector<string> attribut = splitLine(line, ';');
-		vector<Attribut*> liste;
+		vector<Attribut *> liste;
 		for (int i = 0; i < modele.size(); i++)
 		{
 			if (modele[i] == 0)
 			{
-				Attribut* a = new AttributString(nomAttribut[i], attribut[i + 1]);
+				Attribut *a = new AttributString(nomAttribut[i], attribut[i + 1]);
 				liste.push_back(a);
 			}
 			else if (modele[i] == 1)
 			{
 				int val = stod(attribut[i + 1]);
-				Attribut* a = new AttributDouble(nomAttribut[i], val);
+				Attribut *a = new AttributDouble(nomAttribut[i], val);
 				liste.push_back(a);
 			}
 		}
@@ -155,7 +156,7 @@ void GestionFichier::lireEmpreinte(vector<Empreinte>& listEmpreinte, vector<int>
 vector<string> GestionFichier::splitLine(string line, char c = ' ')
 {
 	vector<string> result;
-	const char* str = line.c_str();
+	const char *str = line.c_str();
 	do
 	{
 		const char *begin = str;
@@ -184,17 +185,61 @@ string GestionFichier::getAnalyseEmpreinte()
 	return ANALYSE_EMPREINTE;
 }
 
-void GestionFichier::setDefEmpreinte(const string & defEmpreinte)
+void GestionFichier::setDefEmpreinte(const string &defEmpreinte)
 {
 	DEF_EMPREINTE = defEmpreinte;
 }
 
-void GestionFichier::setBdMaladie(const string & bdMaladie)
+void GestionFichier::setBdMaladie(const string &bdMaladie)
 {
 	BD_MALADIE = bdMaladie;
 }
 
-void GestionFichier::setAnalyseEmpreinte(const string & analyseEmpreinte)
+void GestionFichier::setAnalyseEmpreinte(const string &analyseEmpreinte)
 {
 	ANALYSE_EMPREINTE = analyseEmpreinte;
+}
+
+void GestionFichier::affichageEmpreintes()
+{
+	ifstream is;
+	is.open(ANALYSE_EMPREINTE);
+	set<string> idEmpreintes;
+	set<string>::iterator it;
+	string line;
+	vector<string> tuple;
+	if (is.is_open())
+	{
+		getline(is, line);
+		while (getline(is, line))
+		{
+			tuple = splitLine(line, ';');
+			idEmpreintes.insert(*(tuple.begin()));
+		}
+		for (it = idEmpreintes.begin(); it != idEmpreintes.end(); ++it)
+			std::cout << *it << endl;
+	}
+	is.close();
+}
+
+void GestionFichier::affichageMaladies()
+{
+	ifstream is;
+	is.open(BD_MALADIE);
+	set<string> maladies;
+	set<string>::iterator it;
+	string line;
+	vector<string> tuple;
+	if (is.is_open())
+	{
+		getline(is, line);
+		while (getline(is, line))
+		{
+			tuple = splitLine(line, ';');
+			maladies.insert(*(tuple.end() - 1));
+		}
+		for (it = maladies.begin(); it != maladies.end(); ++it)
+			std::cout << *it << endl;
+	}
+	is.close();
 }

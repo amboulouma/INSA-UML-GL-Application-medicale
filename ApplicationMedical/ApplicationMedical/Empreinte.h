@@ -8,7 +8,6 @@
 #include "AttributDouble.h"
 #include "stdafx.h"
 
-
 #ifndef Empreinte_H
 #define Empreinte_H
 
@@ -18,27 +17,27 @@ class Empreinte
 {
 	friend class GestionDonnees;
 	friend class GestionFichier;
-	protected:
-		int NoID;
-		vector<Attribut*> listeAttributs;
-		static const string FICHIER_EMPREINTES;
-		static const string FICHIER_METADONNEES;
 
-	public:
-		Empreinte();
+  protected:
+	int NoID;
+	vector<Attribut *> listeAttributs;
+	static const string FICHIER_EMPREINTES;
+	static const string FICHIER_METADONNEES;
 
-		Empreinte(int id, vector<Attribut*> list);
+  public:
+	Empreinte();
 
-		~Empreinte();
+	Empreinte(int id, vector<Attribut *> list);
 
-		double distance(Empreinte e,vector<int> modele);
+	~Empreinte();
 
-		int getID() const;
+	double distance(Empreinte e, vector<int> modele);
 
-		vector<Attribut*> getListeAttributs();
+	int getID() const;
 
-		bool operator==(const Empreinte &) const;
+	vector<Attribut *> getListeAttributs();
 
+	bool operator==(const Empreinte &) const;
 };
 
 #endif

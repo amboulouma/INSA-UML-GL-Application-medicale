@@ -32,10 +32,8 @@ void GestionDonnees::calculerMaladies()
 	listMaladie.clear();
 	unordered_map<string, Empreinte> liste;
 	gf.lireBD(liste, modele);
-	std::cout << "lol" << std::endl;
 	for (auto i = liste.begin(); i != liste.end(); ++i)
 	{
-		std::cout << "Coucou" << std::endl;
 		Maladie m(i->first, i->second);
 		listMaladie.push_back(m);
 	}
@@ -53,7 +51,7 @@ void GestionDonnees::analyse(const Empreinte &e)
 	cout << e.getID() << endl;
 	for (auto i = resultat.begin(); i != resultat.end(); ++i)
 	{
-		cout << "     Maladie: " << i->first << " | Probabilite: " << i->second << endl;
+		cout << "Maladie: " << i->first << " | Probabilite: " << i->second << endl;
 	}
 }
 
@@ -150,28 +148,6 @@ void GestionDonnees::setFichierMaladie(const string &fichierMaladie)
 void GestionDonnees::setFichierEmpreintes(const string &fichierEmpreintes)
 {
 	FICHIER_EMPREINTES = fichierEmpreintes;
-}
-
-void GestionDonnees::affichageMaladies()
-{
-	ifstream is;
-	is.open(FICHIER_MALADIE);
-	set<string> maladies;
-	set<string>::iterator it;
-	string line;
-	vector<string> tuple;
-	if (is.is_open())
-	{
-		getline(is, line);
-		while (getline(is, line))
-		{
-			tuple = splitLine(line, ';');
-			maladies.insert(*(tuple.end() - 1));
-		}
-		for (it = maladies.begin(); it != maladies.end(); ++it)
-			std::cout << *it << endl;
-	}
-	is.close();
 }
 
 vector<string> GestionDonnees::splitLine(string line, char c = ' ')

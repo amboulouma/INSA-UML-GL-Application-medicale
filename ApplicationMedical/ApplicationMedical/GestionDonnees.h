@@ -42,7 +42,6 @@ class GestionDonnees
 
 	void setFichierMaladie(const string &fichierMaladie);
 	void setFichierEmpreintes(const string &fichierEmpreintes);
-	void affichageMaladies();
 
 	vector<string> splitLine(string line, char separator);
 };

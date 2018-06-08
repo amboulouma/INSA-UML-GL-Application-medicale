@@ -10,13 +10,13 @@ using namespace std;
 
 class Attribut
 {
-	protected :
-		string nom;
-		const string FICHIER_LOGS = "logs.txt";
+  protected:
+	string nom;
+	const string FICHIER_LOGS = "logs.txt";
 
-	public :
-		virtual double distance(Attribut * attribut) = 0;
-		virtual bool operator == (const Attribut & unAtt);
+  public:
+	virtual double distance(Attribut *attribut) = 0;
+	virtual bool operator==(const Attribut &unAtt);
 };
 
 #endif

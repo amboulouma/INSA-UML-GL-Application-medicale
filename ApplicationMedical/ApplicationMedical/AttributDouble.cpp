@@ -43,17 +43,16 @@ double AttributDouble::distance(Attribut *attribut)
 	return distance;
 }
 
-bool AttributDouble::operator==(const Attribut & unAtt)
+bool AttributDouble::operator==(const Attribut &unAtt)
 {
-	const AttributDouble * attributDouble = dynamic_cast<const AttributDouble*>(&unAtt);
+	const AttributDouble *attributDouble = dynamic_cast<const AttributDouble *>(&unAtt);
 	if (attributDouble == NULL)
 	{
 		return false;
 	}
 	else
 	{
-		if (attributDouble->data - this->data < 0.000001
-			&& attributDouble->data - this->data > -0.000001)
+		if (attributDouble->data - this->data < 0.000001 && attributDouble->data - this->data > -0.000001)
 		{
 			return true;
 		}

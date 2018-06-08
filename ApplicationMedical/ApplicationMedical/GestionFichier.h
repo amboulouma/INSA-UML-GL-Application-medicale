@@ -14,11 +14,10 @@ using namespace std;
 
 class GestionFichier
 {
-private:
+  private:
 	string DEF_EMPREINTE = "Metadonnees.txt";
 	string BD_MALADIE = "Maladies.txt";
 	string ANALYSE_EMPREINTE = "Empreintes.txt";
-
 
   public:
 	GestionFichier();
@@ -37,9 +36,12 @@ private:
 	string getBdMaladie();
 	string getAnalyseEmpreinte();
 
-	void setDefEmpreinte(const string & defEmpreinte);
-	void setBdMaladie(const string & bdMaladie);
-	void setAnalyseEmpreinte(const string & analyseEmpreinte);
+	void setDefEmpreinte(const string &defEmpreinte);
+	void setBdMaladie(const string &bdMaladie);
+	void setAnalyseEmpreinte(const string &analyseEmpreinte);
+
+	void affichageEmpreintes();
+	void affichageMaladies();
 };
 
 #endif
