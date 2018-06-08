@@ -3,7 +3,10 @@
 
 using namespace std;
 
-AttributDouble::AttributDouble() {}
+AttributDouble::AttributDouble()
+{
+	cout << "Construction d'un attribut double" << endl;
+}
 
 AttributDouble::AttributDouble(string nom, double data)
 {
@@ -14,7 +17,7 @@ AttributDouble::AttributDouble(string nom, double data)
 
 AttributDouble::~AttributDouble()
 {
-	cout << "Construction d'un arrtibut double" << endl;
+	cout << "Destruction d'un attribut double" << endl;
 }
 
 double AttributDouble::getData()

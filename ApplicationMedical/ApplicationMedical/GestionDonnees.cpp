@@ -158,23 +158,6 @@ void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte empreint
 	genererListeMaladie();
 }
 
-vector<string> GestionDonnees::splitLine(string line, char c = ' ')
-{
-	vector<string> result;
-	const char *str = line.c_str();
-	do
-	{
-		const char *begin = str;
-
-		while (*str != c && *str)
-			str++;
-
-		result.push_back(string(begin, str));
-	} while (0 != *str++);
-
-	return result;
-}
-
 Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 {
 	cout << "Recherche de l'empreinte : " << id << endl;
@@ -207,4 +190,21 @@ Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 			return empreinte;
 		}
 	}
+}
+
+vector<string> GestionDonnees::splitLine(string line, char c = ' ')
+{
+	vector<string> result;
+	const char *str = line.c_str();
+	do
+	{
+		const char *begin = str;
+
+		while (*str != c && *str)
+			str++;
+
+		result.push_back(string(begin, str));
+	} while (0 != *str++);
+
+	return result;
 }

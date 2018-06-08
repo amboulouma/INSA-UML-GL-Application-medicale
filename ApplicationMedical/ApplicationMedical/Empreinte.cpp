@@ -68,6 +68,7 @@ double Empreinte::distance(Empreinte empreinte)
 
 void Empreinte::sauvegarderEmpreinte()
 {
+	cout << "Sauvegarder l'empreinte" << endl;
 	ofstream os;
 	os.open(FICHIER_EMPREINTES, std::ofstream::out | std::ofstream::app);
 	os << NoID;

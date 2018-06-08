@@ -1,7 +1,10 @@
 #include "stdafx.h"
 #include "AttributString.h"
 
-AttributString::AttributString() {}
+AttributString::AttributString()
+{
+	cout << "Construction d'un attribut string" << endl;
+}
 
 AttributString::AttributString(string nom, string data)
 {
@@ -12,7 +15,7 @@ AttributString::AttributString(string nom, string data)
 
 AttributString::~AttributString()
 {
-	cout << "Construction d'un arrtibut string" << endl;
+	cout << "Destruction d'un attribut string" << endl;
 }
 
 string AttributString::getData()
