@@ -60,26 +60,6 @@ namespace TestsMaladies
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode presence appliquee sur une maladie
-			ayant une empreinte moyenne et une empreinte passee en parametre vides retourne une
-			probabilite de 1.0
-			*/
-			vector <Attribut*> attributs1;
-			vector <Attribut*> attributs2;
-
-			vector<int> schema;
-
-			Empreinte empreinteMoyenne(1, attributs1);
-			Empreinte empreinteATester(2, attributs2);
-
-			Maladie m("Myoclonie Phrenoglottique", empreinteMoyenne);
-
-			Assert::AreEqual(m.presence(empreinteATester, schema), 1.0);
-		}
-
-		TEST_METHOD(TestMaladies3)
-		{
-			/*
-			Ce test unitaire permet de vérifier que la méthode presence appliquee sur une maladie
 			avec comme parametre son empreinte moyenne retourne une probabilite de 1.0
 			*/
 			vector <Attribut*> attributs1;
@@ -105,7 +85,7 @@ namespace TestsMaladies
 			Assert::AreEqual(m.presence(empreinteMoyenne, schema), 1.0);
 		}
 
-		TEST_METHOD(TestMaladies4)
+		TEST_METHOD(TestMaladies3)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode presence appliquee sur une maladie
@@ -121,7 +101,6 @@ namespace TestsMaladies
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", -153.12));
 			attributs1.push_back(new AttributString("Att2", "content"));
@@ -141,7 +120,7 @@ namespace TestsMaladies
 			Assert::AreEqual(m.presence(empreinteATester, schema), 0.5);
 		}
 
-		TEST_METHOD(TestMaladies5)
+		TEST_METHOD(TestMaladies4)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode presence appliquee sur une maladie
@@ -157,7 +136,6 @@ namespace TestsMaladies
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", -0.12));
 			attributs1.push_back(new AttributString("Att2", "content"));
@@ -177,7 +155,7 @@ namespace TestsMaladies
 			Assert::AreEqual(m.presence(empreinteATester, schema), 0.6675);
 		}
 
-		TEST_METHOD(TestMaladies6)
+		TEST_METHOD(TestMaladies5)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode presence appliquee sur une maladie
@@ -193,7 +171,6 @@ namespace TestsMaladies
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", -14.2));
 			attributs1.push_back(new AttributString("Att2", "content"));
@@ -213,7 +190,7 @@ namespace TestsMaladies
 			Assert::AreEqual(m.presence(empreinteATester, schema), 0.375);
 		}
 
-		TEST_METHOD(TestMaladies7)
+		TEST_METHOD(TestMaladies6)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode presence appliquee sur une maladie
@@ -229,7 +206,6 @@ namespace TestsMaladies
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", -14.2));
 			attributs1.push_back(new AttributString("Att2", "content"));

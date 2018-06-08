@@ -3,9 +3,6 @@
 
 using namespace std;
 
-const string Empreinte::FICHIER_METADONNEES = "Metadonnees.txt";
-const string Empreinte::FICHIER_EMPREINTES = "Empreintes.txt";
-
 Empreinte::Empreinte() {}
 
 Empreinte::Empreinte(int id, vector<Attribut *> liste) : listeAttributs(liste)

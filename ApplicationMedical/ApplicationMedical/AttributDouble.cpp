@@ -29,11 +29,11 @@ double AttributDouble::distance(Attribut *attribut)
 	double distance = 0;
 	if (this->data - attributDouble->data > 0)
 	{
-		distance = (this->data - attributDouble->data) / attributDouble->data;
+		distance = (this->data - attributDouble->data) ;
 	}
 	else if (attributDouble->data - this->data > 0)
 	{
-		distance = 2 * (attributDouble->data - this->data) / attributDouble->data;
+		distance = (attributDouble->data - this->data);
 	}
 
 	if (distance > 1.0)

@@ -41,7 +41,7 @@ namespace TestsGestionFichier
 					return false;
 				}
 			}
-			if (f1 || f2)
+			if (!(f1.eof() && f2.eof()))
 			{
 				return false;
 			}
@@ -63,7 +63,7 @@ namespace TestsGestionFichier
 			list<Maladie>::iterator it2;
 			for (it = m1.begin(), it2 = m2.begin(); it != m1.end(), it2 != m2.end(); ++it, ++it2)
 			{
-				if (!(*it == *it2))
+				if (!(it->getNom()==it2->getNom()))
 				{
 					return false;
 				}
@@ -105,11 +105,21 @@ namespace TestsGestionFichier
 			correctement mise a jour
 			*/
 
+			std::ofstream Out("./../UnitTest1/fichiersTests/sortie.txt");
+			std::streambuf* OldBuf = std::cout.rdbuf(Out.rdbuf());
+
+			// Restauration du streambuf initial de std::cout (affichage sur la console) 
+			
+
 			GestionFichier gestionFichier;
 			GestionDonnees gestionDonnees;
 
 			gestionDonnees.setFichierMaladie("./../UnitTest1/fichiersTests/BaseMaladieTestAjouterDansBD1.csv");
 			gestionFichier.setBdMaladie("./../UnitTest1/fichiersTests/BaseMaladieTestAjouterDansBD1.csv");
+
+			gestionFichier.setDefEmpreinte("./../UnitTest1/fichiersTests/ModeleTestAnalyseSimple1.csv");
+
+			gestionDonnees.defModele();
 
 			gestionDonnees.calculerMaladies();
 
@@ -166,7 +176,10 @@ namespace TestsGestionFichier
 
 			Assert::IsTrue(comparerFichiers(fichier1, fichier2));
 
-			Assert::IsTrue(comparerListesMaladies(maladiesTheorique, maladies));
+			
+			Assert::IsTrue(comparerListesMaladies(maladiesTheorique, gestionDonnees.listMaladie));
+
+			std::cout.rdbuf(OldBuf);
 		}
 
 		TEST_METHOD(TestAjouterDansBD2)

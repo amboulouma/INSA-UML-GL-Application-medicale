@@ -6,7 +6,12 @@
 
 using namespace std;
 
-GestionFichier::GestionFichier() {}
+GestionFichier::GestionFichier()
+{
+	DEF_EMPREINTE = "Metadonnees.txt";
+	BD_MALADIE = "Maladies.txt";
+	ANALYSE_EMPREINTE = "Empreintes.txt";
+}
 
 GestionFichier::~GestionFichier() {}
 
@@ -35,11 +40,15 @@ void GestionFichier::ajouterDansBD(Empreinte &e, string nomMaladie, vector<int> 
 
 void GestionFichier::modeleEmpreinte(vector<string> &nomAttribut, vector<int> &modele)
 {
+	modele.clear();
+	nomAttribut.clear();
 	string line;
-	ifstream is("./../ApplicationMedical/Metadonnees.txt");
+	ifstream is(DEF_EMPREINTE);
+	std::cout << DEF_EMPREINTE << std::endl;
 	while (is)
 	{
 		getline(is, line);
+		std::cout << line << std::endl;
 		int pos = line.find(';');
 		string type = line.substr(pos + 1);
 		cout << type << endl;
@@ -185,7 +194,7 @@ string GestionFichier::getAnalyseEmpreinte()
 	return ANALYSE_EMPREINTE;
 }
 
-void GestionFichier::setDefEmpreinte(const string &defEmpreinte)
+void GestionFichier::setDefEmpreinte(string defEmpreinte)
 {
 	DEF_EMPREINTE = defEmpreinte;
 }

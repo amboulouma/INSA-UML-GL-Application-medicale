@@ -26,7 +26,7 @@ Empreinte Maladie::getEmpreinteMoyenne()
 	return empreinteMoyenne;
 }
 
-bool Maladie::operator==(const Maladie& m)
+bool Maladie::operator==(Maladie& m)
 {
 	return (m.nom == this->nom);
 }

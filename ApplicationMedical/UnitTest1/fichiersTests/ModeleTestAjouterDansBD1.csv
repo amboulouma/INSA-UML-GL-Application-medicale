@@ -1,2 +1,6 @@
-NoID;A1;A2;A3;A4;A5;Disease
-1;0.5;content;1.5;content2;2.5;Myoclonie Phrenoglottique
+AttributeName;AttributeType
+A1;double
+A2;string
+A3;double
+A4;string
+A5;double

@@ -19,10 +19,7 @@ GestionDonnees::~GestionDonnees() {}
 void GestionDonnees::defModele()
 {
 	GestionFichier gf;
-	if (modele.empty())
-	{
-		gf.modeleEmpreinte(nomAttribut, modele);
-	}
+	gf.modeleEmpreinte(nomAttribut, modele);
 }
 
 void GestionDonnees::calculerMaladies()
@@ -55,7 +52,7 @@ void GestionDonnees::analyse(const Empreinte &e)
 	}
 }
 
-void GestionDonnees::analyse(const list<Empreinte> listeEmpreintes)
+void GestionDonnees::analyse(const list<Empreinte> &listeEmpreintes)
 {
 	for (Empreinte e : listeEmpreintes)
 	{
@@ -72,7 +69,7 @@ void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte e)
 
 Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 {
-	ifstream is(Empreinte::FICHIER_EMPREINTES);
+	ifstream is(FICHIER_EMPREINTES);
 	string line;
 	getline(is, line);
 	while (getline(is, line))

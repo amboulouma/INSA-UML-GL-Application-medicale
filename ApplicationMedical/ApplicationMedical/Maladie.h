@@ -34,7 +34,7 @@ class Maladie
 
 	Empreinte getEmpreinteMoyenne();
 
-	bool operator==(const Maladie &);
+	bool operator==(Maladie &);
 };
 
 #endif
