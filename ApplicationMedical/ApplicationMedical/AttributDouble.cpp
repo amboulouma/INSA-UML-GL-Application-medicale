@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "AttributDouble.h"
+#include <fstream>
 
 using namespace std;
 

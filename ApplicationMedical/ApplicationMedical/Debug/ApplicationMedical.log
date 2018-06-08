@@ -1,7 +1,21 @@
-﻿  ApplicationMedical.cpp
+﻿  stdafx.cpp
+  ApplicationMedical.cpp
+  Attribut.cpp
+  AttributDouble.cpp
+  AttributString.cpp
+  Empreinte.cpp
   GestionDonnees.cpp
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(146): warning C4018: '<': signed/unsigned mismatch
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(155): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(85): warning C4018: '<': signed/unsigned mismatch
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(94): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  GestionFichier.cpp
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(17): warning C4018: '<': signed/unsigned mismatch
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(78): warning C4018: '<': signed/unsigned mismatch
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(83): warning C4018: '<': signed/unsigned mismatch
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(101): warning C4018: '<': signed/unsigned mismatch
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(115): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(132): warning C4018: '<': signed/unsigned mismatch
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(141): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Maladie.cpp
   Generating Code...
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(165): warning C4715: 'GestionDonnees::trouverEmpreinteParID': not all control paths return a value
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(104): warning C4715: 'GestionDonnees::trouverEmpreinteParID': not all control paths return a value
   ApplicationMedical.vcxproj -> D:\GLUML\INSA-UML-GL-Application-medicale\ApplicationMedical\Debug\ApplicationMedical.exe
