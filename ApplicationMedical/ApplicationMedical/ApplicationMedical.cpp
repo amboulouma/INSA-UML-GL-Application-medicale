@@ -17,16 +17,6 @@ using namespace std;
 
 int main()
 {
-
-	// GestionDonnees gd;
-
-	// unordered_map<string, double> res = gd.analyse(e);
-	// gd.associerMaladieEmpreinte("Maladie1", e);
-
-	// Empreinte e1 = gd.trouverEmpreinteParID(2);
-
-	// Main
-
 	int choixMenu = 0, choixEmpreinte = 0, choixAjoutMaladie = 0;
 
 	GestionDonnees gestionDonnees;
@@ -38,6 +28,8 @@ int main()
 	Empreinte empreinteMaladie;
 	int nombreEmpreintes;
 	list<Empreinte> listeEmpreintesMaladie;
+
+	Maladie maladieCaracteristique;
 
 	vector<Attribut *> listeAttributs;
 	Attribut *a1, *a2, *a3, *a4, *a5;
@@ -56,9 +48,8 @@ int main()
 		cout << endl;
 		cout << "1- Analyser une empreinte" << endl;
 		cout << "2- Afficher les maladies prises en compte" << endl;
-		cout << "3- Afficher les caractéristiques d'une maladie" << endl;
-		cout << "4- Ajouter une empreinte" << endl;
-		cout << "5- Quitter" << endl;
+		cout << "3- Ajouter une empreinte" << endl;
+		cout << "4- Quitter" << endl;
 		cout << endl;
 		cout << "Entrez votre choix : ";
 		cin >> choixMenu;
@@ -124,20 +115,10 @@ int main()
 		case 2:
 			cout << "Afficher les maladies prises en compte" << endl;
 			gestionFichier.affichageMaladies();
+
 			break;
 
 		case 3:
-			cout << "Afficher les caractéristiques d'une maladie" << endl;
-			cout << endl;
-			gestionFichier.affichageMaladies();
-			cout << "Entrez nom de de la maladie :";
-			cin >> nomMaladie;
-			//TODO
-			cout << endl;
-
-			break;
-
-		case 4:
 			cout << "Ajouter une empreinte" << endl;
 
 			cout << "entrez l'attribut A1 : ";
@@ -199,7 +180,7 @@ int main()
 			}
 			break;
 
-		case 5:
+		case 4:
 			cout << "Vous avez quitté l'application." << endl;
 			break;
 

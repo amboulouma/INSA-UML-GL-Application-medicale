@@ -30,7 +30,7 @@ class GestionDonnees
 	void defModele();
 	void calculerMaladies();
 	void analyse(const Empreinte &Empreinte);
-	void analyse(const list<Empreinte>& listeEmpreintes);
+	void analyse(const list<Empreinte> &listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
 	Empreinte trouverEmpreinteParID(int id);
 	void getMaladies(list<Maladie> &maladies);
@@ -39,6 +39,7 @@ class GestionDonnees
 
 	string getFichierMaladie();
 	string getFichierEmpreintes();
+	Empreinte getEmpreinteMoyenne(string maladie);
 
 	void setFichierMaladie(const string &fichierMaladie);
 	void setFichierEmpreintes(const string &fichierEmpreintes);
