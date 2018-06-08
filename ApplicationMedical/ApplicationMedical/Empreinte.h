@@ -33,11 +33,11 @@ class Empreinte
 
 		double distance(Empreinte e,vector<int> modele);
 
-		int getID();
+		int getID() const;
 
 		vector<Attribut*> getListeAttributs();
 
-		bool operator==(const Empreinte &);
+		bool operator==(const Empreinte &) const;
 
 };
 

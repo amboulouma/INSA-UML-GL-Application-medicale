@@ -38,7 +38,7 @@ double Empreinte::distance(Empreinte e,vector<int> modele)
 }
 
 
-int Empreinte::getID()
+int Empreinte::getID() const
 {
 	return NoID;
 }
@@ -48,7 +48,7 @@ vector<Attribut*> Empreinte::getListeAttributs()
 	return listeAttributs;
 }
 
-bool Empreinte::operator==(const Empreinte& e)
+bool Empreinte::operator==(const Empreinte& e) const
 {
 	return (e.NoID == this->NoID);
 }

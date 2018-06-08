@@ -1,7 +1,17 @@
-﻿  ApplicationMedical.cpp
+﻿  GestionFichier.cpp
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(18): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(81): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(86): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(104): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(118): warning C4244: 'argument' : conversion de 'double' en 'int', perte possible de données
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(135): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestionfichier.cpp(144): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
   GestionDonnees.cpp
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(146): warning C4018: '<': signed/unsigned mismatch
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(155): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
-d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(165): warning C4715: 'GestionDonnees::trouverEmpreinteParID': not all control paths return a value
-  ApplicationMedical.vcxproj -> D:\GLUML\INSA-UML-GL-Application-medicale\ApplicationMedical\Debug\ApplicationMedical.exe
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(88): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(97): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
+  Génération de code en cours...
+c:\users\cflorant\tp uml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(107): warning C4715: 'GestionDonnees::trouverEmpreinteParID' : les chemins de contrôle ne retournent pas tous une valeur
+  Ignoré... (aucune modification pertinente détectée)
+  ApplicationMedical.cpp
+LINK : warning LNK4068: /MACHINE non spÚcifiÚá; X86 pris par dÚfaut
+  ApplicationMedical.vcxproj -> C:\Users\cflorant\TP UML\INSA-UML-GL-Application-medicale\ApplicationMedical\Debug\ApplicationMedical.lib

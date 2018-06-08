@@ -16,7 +16,7 @@ using namespace std;
 
 int main()
 {
-	vector<Attribut*> list1;
+	/*vector<Attribut*> list1;
 	Attribut * a1 = new AttributString("A1", "False");
 	list1.push_back(a1);
 	Attribut * a2 = new AttributDouble("A2", 7.8);
@@ -36,6 +36,6 @@ int main()
 
 	Empreinte e1 = gd.trouverEmpreinteParID(2);
 
-	return 0;
+	return 0;*/
 }
 
