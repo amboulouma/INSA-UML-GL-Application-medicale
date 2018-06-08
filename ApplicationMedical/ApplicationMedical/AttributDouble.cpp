@@ -1,29 +1,28 @@
 #include "stdafx.h"
 #include "AttributDouble.h"
 
-
 using namespace std;
 
-AttributDouble::AttributDouble() { }
+AttributDouble::AttributDouble() {}
 
-AttributDouble::AttributDouble(string nom, double data) 
+AttributDouble::AttributDouble(string nom, double data)
 {
 	this->nom = nom;
 	this->data = data;
 }
 
-AttributDouble::~AttributDouble() { }
+AttributDouble::~AttributDouble() {}
 
 double AttributDouble::getData()
 {
 	return data;
 }
 
-double AttributDouble::distance(Attribut * attribut)
+double AttributDouble::distance(Attribut *attribut)
 {
-	AttributDouble* ad = dynamic_cast<AttributDouble*>(attribut);
+	AttributDouble *ad = dynamic_cast<AttributDouble *>(attribut);
 	double distance = 0;
-	if (this->data-ad->data > 0)
+	if (this->data - ad->data > 0)
 	{
 		distance = (this->data - ad->data) / ad->data;
 	}

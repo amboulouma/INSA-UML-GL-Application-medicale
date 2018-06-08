@@ -10,11 +10,11 @@ using namespace std;
 
 class Attribut
 {
-	protected :
-		string nom;
+  protected:
+	string nom;
 
-	public :
-		virtual double distance(Attribut * attribut) = 0;
+  public:
+	virtual double distance(Attribut *attribut) = 0;
 };
 
 #endif

@@ -3,7 +3,6 @@
 // AttributDouble.h
 #include "Attribut.h"
 
-
 #ifndef AttributDouble_H
 #define AttributDouble_H
 
@@ -11,21 +10,19 @@ using namespace std;
 
 class AttributDouble : public Attribut
 {
-	private:
+  private:
+	double data;
 
-		double data;
+  public:
+	AttributDouble();
 
-	public:
+	AttributDouble(string nom, double data);
 
-		AttributDouble();
+	~AttributDouble();
 
-		AttributDouble(string nom, double data);
+	double getData();
 
-		~AttributDouble();
-
-		double getData();
-
-		double distance(Attribut * attribut);
+	double distance(Attribut *attribut);
 };
 
 #endif

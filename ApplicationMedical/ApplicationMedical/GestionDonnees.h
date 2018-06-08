@@ -14,18 +14,18 @@ using namespace std;
 
 class GestionDonnees
 {
-  private:
+private:
 	const string FICHIER_MALADIE = "Maladies.txt";
 	const string FICHIER_EMPREINTES = "Empreintes.txt";
 	list<Maladie> listMaladie;
 
-  public:
+public:
 	GestionDonnees();
 
 	~GestionDonnees();
-	
+
 	void genererListeMaladie();
-	unordered_map<string,double> analyse(Empreinte e);
+	unordered_map<string, double> analyse(Empreinte e);
 	void analyse(list<Empreinte> listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
 	vector<string> splitLine(string line, char separator);

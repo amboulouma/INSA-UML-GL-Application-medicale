@@ -14,27 +14,25 @@ class Maladie
 {
 	friend class GestionDonnees;
 
-	private:
+  private:
+	string nom;
 
-		string nom;
+	Empreinte empreinteMoyenne;
 
-		Empreinte empreinteMoyenne;
+	int n;
 
-		int n;
+  public:
+	Maladie();
 
-	public:
+	Maladie(string nom, Empreinte empreinteMoyenne);
 
-		Maladie();
+	~Maladie();
 
-		Maladie(string nom, Empreinte empreinteMoyenne);
+	double presence(Empreinte empreinte);
 
-		~Maladie();
+	string getNom();
 
-		double presence(Empreinte empreinte);
-
-		string getNom();
-
-		Empreinte getEmpreinteMoyenne();
+	Empreinte getEmpreinteMoyenne();
 };
 
 #endif

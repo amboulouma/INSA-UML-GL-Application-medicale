@@ -6,7 +6,7 @@
 
 using namespace std;
 
-GestionDonnees::GestionDonnees() 
+GestionDonnees::GestionDonnees()
 {
 	genererListeMaladie();
 }
@@ -45,12 +45,12 @@ void GestionDonnees::genererListeMaladie()
 	string line;
 	getline(is, line);
 	vector<string> nomAttribut = splitLine(line, ';');
-	unordered_map<string, int> n; //nombre de presence d'une maladie dans le fichier
+	unordered_map<string, int> n;			   //nombre de presence d'une maladie dans le fichier
 	unordered_map<string, vector<double>> sum; //somme des donnees d'un attribut de meme maladie, sum = -1 si un attribut string
 	unordered_map<string, vector<string>> stringMoy;
 	while (getline(is, line))
 	{
-		vector<Attribut*> list;
+		vector<Attribut *> list;
 		vector<string> attribut = splitLine(line, ';');
 		string nomMaladie = attribut[attribut.size() - 1];
 		n[nomMaladie]++;
@@ -79,19 +79,19 @@ void GestionDonnees::genererListeMaladie()
 	is.close();
 	for (auto i = n.begin(); i != n.end(); ++i)
 	{
-		vector<Attribut*> list;
+		vector<Attribut *> list;
 		string nomMaladie = i->first;
 		for (int j = 0; j < Empreinte::modele.size(); j++)
 		{
 			if (Empreinte::modele[j] == 0)
 			{
-				Attribut* a = new AttributString(Empreinte::nomAttribut[j], stringMoy[nomMaladie][j + 1]);
+				Attribut *a = new AttributString(Empreinte::nomAttribut[j], stringMoy[nomMaladie][j + 1]);
 				list.push_back(a);
 			}
 			else if (Empreinte::modele[j] == 1)
 			{
 				double moy = sum[nomMaladie][j + 1] / n[nomMaladie];
-				Attribut* a = new AttributDouble(Empreinte::nomAttribut[j], moy);
+				Attribut *a = new AttributDouble(Empreinte::nomAttribut[j], moy);
 				list.push_back(a);
 			}
 		}
@@ -104,7 +104,7 @@ void GestionDonnees::genererListeMaladie()
 unordered_map<string, double> GestionDonnees::analyse(Empreinte e)
 {
 	unordered_map<string, double> resultat;
-	for (Maladie m : listMaladie) 
+	for (Maladie m : listMaladie)
 	{
 		double probab = m.presence(e);
 		resultat.insert(make_pair(m.getNom(), probab));
@@ -131,17 +131,17 @@ void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte e)
 	ofstream os;
 	os.open(FICHIER_MALADIE, ofstream::out | ofstream::app);
 	os << e.getID();
-	vector<Attribut*> listeAttributs = e.listeAttributs;
+	vector<Attribut *> listeAttributs = e.listeAttributs;
 	for (int i = 0; i < listeAttributs.size(); i++)
 	{
 		if (Empreinte::modele[i] == 0)
 		{
-			AttributString* as = dynamic_cast<AttributString*>(listeAttributs[i]);
+			AttributString *as = dynamic_cast<AttributString *>(listeAttributs[i]);
 			os << ";" << as->getData();
 		}
 		else
 		{
-			AttributDouble* ad = dynamic_cast<AttributDouble*>(listeAttributs[i]);
+			AttributDouble *ad = dynamic_cast<AttributDouble *>(listeAttributs[i]);
 			os << ";" << ad->getData();
 		}
 	}
@@ -153,7 +153,7 @@ void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte e)
 vector<string> GestionDonnees::splitLine(string line, char c = ' ')
 {
 	vector<string> result;
-	const char* str = line.c_str();
+	const char *str = line.c_str();
 	do
 	{
 		const char *begin = str;
@@ -179,24 +179,23 @@ Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 		if (idEmpreinte == id)
 		{
 			vector<string> attribut = splitLine(line, ';');
-			vector<Attribut*> liste;
+			vector<Attribut *> liste;
 			for (int i = 0; i < Empreinte::modele.size(); i++)
 			{
 				if (Empreinte::modele[i] == 0)
 				{
-					Attribut* a = new AttributString(Empreinte::nomAttribut[i],attribut[i+1]);
+					Attribut *a = new AttributString(Empreinte::nomAttribut[i], attribut[i + 1]);
 					liste.push_back(a);
 				}
 				else if (Empreinte::modele[i] == 1)
 				{
 					int val = stod(attribut[i + 1]);
-					Attribut* a = new AttributDouble(Empreinte::nomAttribut[i], val);
+					Attribut *a = new AttributDouble(Empreinte::nomAttribut[i], val);
 					liste.push_back(a);
 				}
 			}
 			Empreinte e(idEmpreinte, liste);
 			return e;
 		}
-		
 	}
 }

@@ -8,25 +8,21 @@
 
 using namespace std;
 
-class AttributString: public Attribut
+class AttributString : public Attribut
 {
-	private:
+  private:
+	string data;
 
-		string data;
+  public:
+	AttributString();
 
-	public:
+	AttributString(string nom, string data);
 
-		AttributString();
+	~AttributString();
 
-		AttributString(string nom, string data);
+	string getData();
 
-		~AttributString();
-
-		string getData();
-		
-		double distance(Attribut * attribut);
-
-
+	double distance(Attribut *attribut);
 };
 
 #endif

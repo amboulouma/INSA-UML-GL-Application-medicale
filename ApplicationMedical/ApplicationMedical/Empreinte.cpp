@@ -10,23 +10,23 @@ vector<string> Empreinte::nomAttribut;
 
 Empreinte::Empreinte() {}
 
-Empreinte::Empreinte(int id, vector<Attribut*> liste) : listeAttributs(liste)
+Empreinte::Empreinte(int id, vector<Attribut *> liste) : listeAttributs(liste)
 {
 	NoID = id;
 	if (Empreinte::modele.empty())
 	{
 		string line;
 		ifstream is(FICHIER_METADONNEES);
-		while (getline(is, line)) 
+		while (getline(is, line))
 		{
 			int pos = line.find(';');
 			string type = line.substr(pos + 1);
 			string nomAtt = line.substr(0, pos);
-			if (type == "string") 
+			if (type == "string")
 			{
 				Empreinte::modele.push_back(0);
 				Empreinte::nomAttribut.push_back(nomAtt);
-			} 
+			}
 			else if (type == "double")
 			{
 				Empreinte::modele.push_back(1);
@@ -44,10 +44,10 @@ Empreinte::~Empreinte()
 double Empreinte::distance(Empreinte e)
 {
 	double d = 0;
-	vector<Attribut*> list1 = e.listeAttributs;
-	for (unsigned int i = 0; i < modele.size(); i++) 
+	vector<Attribut *> list1 = e.listeAttributs;
+	for (unsigned int i = 0; i < modele.size(); i++)
 	{
-		if (modele[i] == 0) 
+		if (modele[i] == 0)
 		{
 			d = d + listeAttributs[i]->distance(list1[i]);
 		}
@@ -55,7 +55,6 @@ double Empreinte::distance(Empreinte e)
 		{
 			d = d + listeAttributs[i]->distance(list1[i]);
 		}
-		
 	}
 	d = d / modele.size();
 	return d;
@@ -68,14 +67,14 @@ void Empreinte::sauvegarderEmpreinte()
 	os << NoID;
 	for (int i = 0; i < listeAttributs.size(); i++)
 	{
-		if (modele[i]==0)
+		if (modele[i] == 0)
 		{
-			AttributString* as = dynamic_cast<AttributString*>(listeAttributs[i]);
+			AttributString *as = dynamic_cast<AttributString *>(listeAttributs[i]);
 			os << ";" << as->getData();
-		} 
+		}
 		else
 		{
-			AttributDouble* ad = dynamic_cast<AttributDouble*>(listeAttributs[i]);
+			AttributDouble *ad = dynamic_cast<AttributDouble *>(listeAttributs[i]);
 			os << ";" << ad->getData();
 		}
 	}
@@ -88,7 +87,7 @@ int Empreinte::getID()
 	return NoID;
 }
 
-vector<Attribut*> Empreinte::getListeAttributs()
+vector<Attribut *> Empreinte::getListeAttributs()
 {
 	return listeAttributs;
 }
