@@ -103,6 +103,24 @@ Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 	}
 }
 
+void GestionDonnees::getMaladies(list<Maladie> & maladies)
+{
+	list<Maladie>::iterator it;
+	for (it = listMaladie.begin(); it != listMaladie.end(); ++it)
+	{
+		maladies.push_back(*it);
+	}
+}
+
+void GestionDonnees::getModele(vector<int>& schema)
+{
+	vector<int>::iterator it;
+	for (it = modele.begin(); it != modele.end(); ++it)
+	{
+		schema.push_back(*it);
+	}
+}
+
 vector<string> GestionDonnees::splitLine(string line, char c = ' ')
 {
 	vector<string> result;
