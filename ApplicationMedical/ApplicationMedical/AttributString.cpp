@@ -24,3 +24,23 @@ double AttributString::distance(Attribut * attribut)
 		distance = 1.0;
 	return distance;
 }
+
+bool AttributString::operator==(const Attribut & unAtt)
+{
+	const AttributString * attributString = dynamic_cast<const AttributString*>(&unAtt);
+	if (attributString == NULL)
+	{
+		return false;
+	}
+	else
+	{
+		if (attributString->data == this->data)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

@@ -11,9 +11,9 @@ Maladie::Maladie(string nom, Empreinte empreinteMoyenne)
 
 Maladie::~Maladie() {}
 
-double Maladie::presence(Empreinte empreinte)
+double Maladie::presence(Empreinte empreinte,vector<int> modele)
 {
-	return 1 - this->empreinteMoyenne.distance(empreinte);
+	return 1 - this->empreinteMoyenne.distance(empreinte,modele);
 }
 
 string Maladie::getNom()
@@ -24,4 +24,9 @@ string Maladie::getNom()
 Empreinte Maladie::getEmpreinteMoyenne()
 {
 	return empreinteMoyenne;
+}
+
+bool Maladie::operator==(const Maladie& m)
+{
+	return (m.nom == this->nom);
 }

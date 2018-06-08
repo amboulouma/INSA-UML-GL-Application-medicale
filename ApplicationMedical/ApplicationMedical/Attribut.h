@@ -15,6 +15,7 @@ class Attribut
 
 	public :
 		virtual double distance(Attribut * attribut) = 0;
+		virtual bool operator == (const Attribut & unAtt);
 };
 
 #endif

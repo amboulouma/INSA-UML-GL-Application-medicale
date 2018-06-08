@@ -30,11 +30,13 @@ class Maladie
 
 		~Maladie();
 
-		double presence(Empreinte empreinte);
+		double presence(Empreinte empreinte, vector<int> modele);
 
 		string getNom();
 
 		Empreinte getEmpreinteMoyenne();
+
+		bool operator==(const Maladie&);
 };
 
 #endif

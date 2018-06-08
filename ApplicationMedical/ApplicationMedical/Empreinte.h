@@ -17,13 +17,12 @@ using namespace std;
 class Empreinte
 {
 	friend class GestionDonnees;
+	friend class GestionFichier;
 	protected:
 		int NoID;
 		vector<Attribut*> listeAttributs;
 		static const string FICHIER_EMPREINTES;
 		static const string FICHIER_METADONNEES;
-		static vector<int> modele;
-		static vector<string> nomAttribut;
 
 	public:
 		Empreinte();
@@ -32,12 +31,13 @@ class Empreinte
 
 		~Empreinte();
 
-		double distance(Empreinte e);
-		void sauvegarderEmpreinte();
+		double distance(Empreinte e,vector<int> modele);
 
 		int getID();
 
 		vector<Attribut*> getListeAttributs();
+
+		bool operator==(const Empreinte &);
 
 };
 

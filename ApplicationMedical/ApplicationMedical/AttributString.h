@@ -26,7 +26,7 @@ class AttributString: public Attribut
 		
 		double distance(Attribut * attribut);
 
-
+		bool operator==(const Attribut & unAtt);
 };
 
 #endif

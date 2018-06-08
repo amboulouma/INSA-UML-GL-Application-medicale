@@ -26,6 +26,8 @@ class AttributDouble : public Attribut
 		double getData();
 
 		double distance(Attribut * attribut);
+
+		bool operator==(const Attribut & unAtt);
 };
 
 #endif

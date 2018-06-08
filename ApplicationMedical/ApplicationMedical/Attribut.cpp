@@ -4,3 +4,7 @@
 #include "Attribut.h"
 
 using namespace std;
+
+bool Attribut::operator==(const Attribut & unAtt) {
+	return false;
+}

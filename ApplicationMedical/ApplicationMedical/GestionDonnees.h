@@ -18,18 +18,23 @@ class GestionDonnees
 	const string FICHIER_MALADIE = "Maladies.txt";
 	const string FICHIER_EMPREINTES = "Empreintes.txt";
 	list<Maladie> listMaladie;
+	vector<string> nomAttribut;
+	vector<int> modele;
+
 
   public:
 	GestionDonnees();
 
 	~GestionDonnees();
 	
-	void genererListeMaladie();
+	void defModele();
+	void calculerMaladies ();
 	unordered_map<string,double> analyse(Empreinte e);
 	void analyse(list<Empreinte> listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
-	vector<string> splitLine(string line, char separator);
 	Empreinte trouverEmpreinteParID(int id);
+
+	vector<string> splitLine(string line, char separator);
 };
 
 #endif
