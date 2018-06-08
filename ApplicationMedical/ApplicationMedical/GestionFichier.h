@@ -14,22 +14,21 @@ using namespace std;
 
 class GestionFichier
 {
-private:
+  private:
 	const string DEF_EMPREINTE = "Metadonnees.txt";
 	const string BD_MALADIE = "Maladies.txt";
 	const string ANALYSE_EMPREINTE = "Empreintes.txt";
 
-
-public:
+  public:
 	GestionFichier();
-	
+
 	~GestionFichier();
 
-	void ajouterDansBD(Empreinte &, string nomMaladie, vector<int>& modele);
+	void ajouterDansBD(Empreinte &, string nomMaladie, vector<int> &modele);
 
-	void modeleEmpreinte(vector<string>& nomAttribut, vector<int>& modele);
-	void lireBD(unordered_map<string,Empreinte>&,vector<int>& modele);
-	void lireEmpreinte(vector<Empreinte>&, vector<int> modele, vector<string> nomAttribut);
+	void modeleEmpreinte(vector<string> &nomAttribut, vector<int> &modele);
+	void lireBD(unordered_map<string, Empreinte> &, vector<int> &modele);
+	void lireEmpreinte(vector<Empreinte> &, vector<int> modele, vector<string> nomAttribut);
 
 	vector<string> splitLine(string line, char separator);
 };

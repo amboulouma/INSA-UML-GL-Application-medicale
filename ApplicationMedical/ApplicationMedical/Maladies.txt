@@ -6,3 +6,9 @@ NoID;A1;A2;A3;A4;AZ51;Disease
 1;False;7.8;80;7.628;68.5;Maladie1
 1;False;7.8;80;7.628;68.5;Maladie1
 1;False;7.8;80;7.628;68.5;Maladie1
+1;False;7.8;80;7.628;68.5;Maladie1
+1;False;7.8;80;7.628;68.5;Maladie1
+1;False;7.8;80;7.628;68.5;Maladie1
+1;False;7.8;80;7.628;68.5;Maladie1
+1;False;7.8;80;7.628;68.5;Maladie1
+1;False;7.8;80;7.628;68.5;Maladie1

@@ -1,0 +1,2 @@
+ApplicationMedical : ApplicationMedical.cpp Attribut.cpp AttributDouble.cpp AttributString.cpp Empreinte.cpp GestionDonnees.cpp GestionFichier.cpp Maladie.cpp
+	g++ -o ApplicationMedical ApplicationMedical.cpp Attribut.cpp AttributDouble.cpp AttributString.cpp Empreinte.cpp GestionDonnees.cpp GestionFichier.cpp Maladie.cpp -I.

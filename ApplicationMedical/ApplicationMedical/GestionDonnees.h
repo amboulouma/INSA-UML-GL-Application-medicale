@@ -21,23 +21,23 @@ class GestionDonnees
 	vector<string> nomAttribut;
 	vector<int> modele;
 
-
   public:
 	GestionDonnees();
 
 	~GestionDonnees();
-	
+
 	void defModele();
-	void calculerMaladies ();
-	unordered_map<string,double> analyse(const Empreinte & e);
-	void analyse(const list<Empreinte>& listeEmpreintes);
+	void calculerMaladies();
+	unordered_map<string, double> analyse(const Empreinte &e);
+	void analyse(const list<Empreinte> &listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
 	Empreinte trouverEmpreinteParID(int id);
-	void getMaladies(list<Maladie> & maladies);
-	void getModele(vector<int> & schema);
+	void getMaladies(list<Maladie> &maladies);
+	void getModele(vector<int> &schema);
+	void affichageMaladies();
 
-
-	vector<string> splitLine(string line, char separator);
+	vector<string>
+	splitLine(string line, char separator);
 };
 
 #endif
