@@ -29,7 +29,7 @@ public:
 
 	void modeleEmpreinte(vector<string>& nomAttribut, vector<int>& modele);
 	void lireBD(unordered_map<string,Empreinte>&,vector<int>& modele);
-	void GestionFichier::lireEmpreinte(vector<Empreinte>&, vector<int> modele, vector<string> nomAttribut);
+	void lireEmpreinte(vector<Empreinte>&, vector<int> modele, vector<string> nomAttribut);
 
 	vector<string> splitLine(string line, char separator);
 };

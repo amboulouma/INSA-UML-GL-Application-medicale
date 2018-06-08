@@ -37,7 +37,7 @@ void GestionDonnees::calculerMaladies()
 	}
 }
 
-unordered_map<string, double> GestionDonnees::analyse(Empreinte e)
+unordered_map<string, double> GestionDonnees::analyse(const Empreinte & e)
 {
 	unordered_map<string, double> resultat;
 	for (Maladie m : listMaladie) 
@@ -49,7 +49,7 @@ unordered_map<string, double> GestionDonnees::analyse(Empreinte e)
 	return resultat;
 }
 
-void GestionDonnees::analyse(list<Empreinte> listeEmpreintes)
+void GestionDonnees::analyse(const list<Empreinte> & listeEmpreintes)
 {
 	for (Empreinte e : listeEmpreintes)
 	{

@@ -29,8 +29,8 @@ class GestionDonnees
 	
 	void defModele();
 	void calculerMaladies ();
-	unordered_map<string,double> analyse(Empreinte e);
-	void analyse(list<Empreinte> listeEmpreintes);
+	unordered_map<string,double> analyse(const Empreinte & e);
+	void analyse(const list<Empreinte>& listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
 	Empreinte trouverEmpreinteParID(int id);
 	void getMaladies(list<Maladie> & maladies);
