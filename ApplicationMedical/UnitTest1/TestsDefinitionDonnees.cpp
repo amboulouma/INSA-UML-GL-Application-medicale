@@ -100,10 +100,11 @@ namespace TestsDefinitionDonnees
 			maladiestheorique.push_back(m2);
 			maladiestheorique.push_back(m3);
 
-			
+			list<Maladie> listMaladie;
+			gestionDonnees.getMaladies(listMaladie);
 
 			list<Maladie>::iterator it;
-			for (Maladie m : gestionDonnees.listMaladie)
+			for (Maladie m : listMaladie)
 			{
 				std::cout << m.getNom() << std::endl;
 			}

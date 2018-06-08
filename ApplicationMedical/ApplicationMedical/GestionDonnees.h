@@ -20,9 +20,9 @@ class GestionDonnees
 
 	vector<string> nomAttribut;
 	vector<int> modele;
-
-  public:
 	list<Maladie> listMaladie;
+  public:
+	
 	GestionDonnees();
 
 	~GestionDonnees();
@@ -39,7 +39,6 @@ class GestionDonnees
 
 	string getFichierMaladie();
 	string getFichierEmpreintes();
-	Empreinte getEmpreinteMoyenne(string maladie);
 
 	void setFichierMaladie(const string &fichierMaladie);
 	void setFichierEmpreintes(const string &fichierEmpreintes);

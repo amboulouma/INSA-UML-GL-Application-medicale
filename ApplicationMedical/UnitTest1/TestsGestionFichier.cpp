@@ -176,8 +176,11 @@ namespace TestsGestionFichier
 
 			Assert::IsTrue(comparerFichiers(fichier1, fichier2));
 
+			list<Maladie> listMaladie;
+
+			gestionDonnees.getMaladies(listMaladie);
 			
-			Assert::IsTrue(comparerListesMaladies(maladiesTheorique, gestionDonnees.listMaladie));
+			Assert::IsTrue(comparerListesMaladies(maladiesTheorique, listMaladie));
 
 			std::cout.rdbuf(OldBuf);
 		}

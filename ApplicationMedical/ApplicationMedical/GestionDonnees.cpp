@@ -164,6 +164,3 @@ vector<string> GestionDonnees::splitLine(string line, char c = ' ')
 	return result;
 }
 
-Empreinte GestionDonnees::getEmpreinteMoyenne(string maladie)
-{
-}

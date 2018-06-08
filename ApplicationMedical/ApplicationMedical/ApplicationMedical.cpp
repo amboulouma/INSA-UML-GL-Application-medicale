@@ -88,7 +88,7 @@ int main()
 					cin >> nombreEmpreintes;
 					cout << "Choisir les identifiants des empreintes à analyser" << endl;
 					gestionFichier.affichageEmpreintes();
-					for (int i; i < nombreEmpreintes; ++i)
+					for (int i=0; i < nombreEmpreintes; ++i)
 					{
 						cin >> idEmpreinteMaladie;
 						empreinteMaladie = gestionDonnees.trouverEmpreinteParID(idEmpreinteMaladie);

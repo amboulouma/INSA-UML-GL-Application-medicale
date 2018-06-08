@@ -1,3 +1,8 @@
-﻿  AttributDouble.cpp
+﻿  GestionDonnees.cpp
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(83): warning C4018: '<': signed/unsigned mismatch
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(92): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  ApplicationMedical.cpp
+  Generating Code...
+d:\gluml\insa-uml-gl-application-medicale\applicationmedical\applicationmedical\gestiondonnees.cpp(101): warning C4715: 'GestionDonnees::trouverEmpreinteParID': not all control paths return a value
 LINK : warning LNK4068: /MACHINE not specified; defaulting to X86
   ApplicationMedical.vcxproj -> D:\GLUML\INSA-UML-GL-Application-medicale\ApplicationMedical\Debug\ApplicationMedical.lib
