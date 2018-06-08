@@ -33,6 +33,9 @@ class GestionDonnees
 	void analyse(list<Empreinte> listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
 	Empreinte trouverEmpreinteParID(int id);
+	void getMaladies(list<Maladie> & maladies);
+	void getModele(vector<int> & schema);
+
 
 	vector<string> splitLine(string line, char separator);
 };
