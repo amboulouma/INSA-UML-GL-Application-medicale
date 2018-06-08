@@ -21,8 +21,6 @@ class Empreinte
 	protected:
 		int NoID;
 		vector<Attribut*> listeAttributs;
-		static const string FICHIER_EMPREINTES;
-		static const string FICHIER_METADONNEES;
 
 	public:
 		Empreinte();

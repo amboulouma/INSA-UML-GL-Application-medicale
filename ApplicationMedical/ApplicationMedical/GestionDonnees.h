@@ -31,7 +31,7 @@ list<Maladie> listMaladie;
 	void defModele();
 	void calculerMaladies();
 	void analyse(const Empreinte &Empreinte);
-	void analyse(list<Empreinte> listeEmpreintes);
+	void analyse(const list<Empreinte>& listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
 	Empreinte trouverEmpreinteParID(int id);
 	void getMaladies(list<Maladie> & maladies);

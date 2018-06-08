@@ -19,10 +19,8 @@ GestionDonnees::~GestionDonnees() {}
 void GestionDonnees::defModele()
 {
 	GestionFichier gf;
-	if (modele.empty())
-	{
-		gf.modeleEmpreinte(nomAttribut, modele);
-	}
+	gf.modeleEmpreinte(nomAttribut, modele);
+	
 }
 
 void GestionDonnees::calculerMaladies()
@@ -32,10 +30,8 @@ void GestionDonnees::calculerMaladies()
 	listMaladie.clear();
 	unordered_map<string, Empreinte> liste;
 	gf.lireBD(liste, modele);
-	std::cout << "lol" << std::endl;
 	for (auto i = liste.begin(); i != liste.end(); ++i)
 	{
-		std::cout << "Coucou" << std::endl;
 		Maladie m(i->first, i->second);
 		listMaladie.push_back(m);
 	}
@@ -43,7 +39,6 @@ void GestionDonnees::calculerMaladies()
 }
 
 void GestionDonnees::analyse(const Empreinte &e)
-=======
 {
 	unordered_map<string, double> resultat;
 	for (Maladie m : listMaladie)
@@ -76,7 +71,7 @@ void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte e)
 
 Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 {
-	ifstream is(Empreinte::FICHIER_EMPREINTES);
+	ifstream is(FICHIER_EMPREINTES);
 	string line;
 	getline(is, line);
 	while (getline(is, line))

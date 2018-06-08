@@ -57,23 +57,6 @@ namespace TestsEmpreintes
 		TEST_METHOD(TestEmpreintes2)
 		{
 			/*
-			Ce test unitaire permet de vérifier que la méthode distance appliquée à deux empreintes
-			distinctes vides retourne 0.0
-			*/
-			vector <Attribut*> attributs1;
-			vector <Attribut*> attributs2;
-
-			vector<int> schema;
-
-			Empreinte e1(1, attributs1);
-			Empreinte e2(2, attributs2);
-
-			Assert::AreEqual(e1.distance(e2, schema), 0.0);
-		}
-
-		TEST_METHOD(TestEmpreintes3)
-		{
-			/*
 			Ce test unitaire permet de vérifier que la méthode distance appliquée à une empreinte
 			sur elle même retourne 0.0
 			*/
@@ -99,7 +82,7 @@ namespace TestsEmpreintes
 		}
 
 
-		TEST_METHOD(TestEmpreintes4)
+		TEST_METHOD(TestEmpreintes3)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode distance appliquée à deux empreintes
@@ -115,7 +98,6 @@ namespace TestsEmpreintes
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", 0.0));
 			attributs1.push_back(new AttributString("Att2", "content"));
@@ -135,7 +117,7 @@ namespace TestsEmpreintes
 			Assert::AreEqual(e2.distance(e1, schema), e1.distance(e2, schema));
 		}
 
-		TEST_METHOD(TestEmpreintes5)
+		TEST_METHOD(TestEmpreintes4)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode distance appliquée à deux empreintes
@@ -150,7 +132,6 @@ namespace TestsEmpreintes
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", -153.12));
 			attributs1.push_back(new AttributString("Att2", "content"));
@@ -170,7 +151,7 @@ namespace TestsEmpreintes
 			Assert::AreEqual(e2.distance(e1, schema), e1.distance(e2, schema));
 		}
 
-		TEST_METHOD(TestEmpreintes6)
+		TEST_METHOD(TestEmpreintes5)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode distance appliquée à deux empreintes
@@ -185,7 +166,6 @@ namespace TestsEmpreintes
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", -0.12));
 			attributs1.push_back(new AttributString("Att2", "content"));
@@ -205,7 +185,7 @@ namespace TestsEmpreintes
 			Assert::AreEqual(e2.distance(e1, schema), e1.distance(e2, schema));
 		}
 
-		TEST_METHOD(TestEmpreintes7)
+		TEST_METHOD(TestEmpreintes6)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode distance appliquée à deux empreintes
@@ -220,7 +200,6 @@ namespace TestsEmpreintes
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", -14.2));
 			attributs1.push_back(new AttributString("Att2", "content"));
@@ -240,7 +219,7 @@ namespace TestsEmpreintes
 			Assert::AreEqual(e2.distance(e1, schema), e1.distance(e2, schema));
 		}
 
-		TEST_METHOD(TestEmpreintes8)
+		TEST_METHOD(TestEmpreintes7)
 		{
 			/*
 			Ce test unitaire permet de vérifier que la méthode distance appliquée à deux empreintes
@@ -255,7 +234,6 @@ namespace TestsEmpreintes
 			schema.push_back(0);
 			schema.push_back(1);
 			schema.push_back(0);
-			schema.push_back(1);
 
 			attributs1.push_back(new AttributDouble("Att1", -14.2));
 			attributs1.push_back(new AttributString("Att2", "content"));

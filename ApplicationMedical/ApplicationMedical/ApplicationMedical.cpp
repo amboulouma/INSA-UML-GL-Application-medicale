@@ -31,7 +31,7 @@ int main()
 
 	GestionDonnees gd;
 
-	unordered_map<string, double> res = gd.analyse(e);
+	gd.analyse(e);
 	gd.associerMaladieEmpreinte("Maladie1", e);
 
 	Empreinte e1 = gd.trouverEmpreinteParID(2);
