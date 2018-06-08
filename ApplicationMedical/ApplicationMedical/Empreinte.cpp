@@ -43,21 +43,21 @@ Empreinte::~Empreinte()
 
 double Empreinte::distance(Empreinte e)
 {
-	double d = 0;
+	double distanceEmpreinte = 0;
 	vector<Attribut *> list1 = e.listeAttributs;
 	for (unsigned int i = 0; i < modele.size(); i++)
 	{
 		if (modele[i] == 0)
 		{
-			d = d + listeAttributs[i]->distance(list1[i]);
+			distanceEmpreinte = distanceEmpreinte + listeAttributs[i]->distance(list1[i]);
 		}
 		else
 		{
-			d = d + listeAttributs[i]->distance(list1[i]);
+			distanceEmpreinte = distanceEmpreinte + listeAttributs[i]->distance(list1[i]);
 		}
 	}
-	d = d / modele.size();
-	return d;
+	distanceEmpreinte = distanceEmpreinte / modele.size();
+	return distanceEmpreinte;
 }
 
 void Empreinte::sauvegarderEmpreinte()

@@ -45,39 +45,39 @@ void GestionDonnees::genererListeMaladie()
 	string line;
 	getline(is, line);
 	vector<string> nomAttribut = splitLine(line, ';');
-	unordered_map<string, int> n;			   //nombre de presence d'une maladie dans le fichier
-	unordered_map<string, vector<double>> sum; //somme des donnees d'un attribut de meme maladie, sum = -1 si un attribut string
+	unordered_map<string, int> nombrePresenceMaladie;
+	unordered_map<string, vector<double>> sommeDonneesAttribut;
 	unordered_map<string, vector<string>> stringMoy;
 	while (getline(is, line))
 	{
 		vector<Attribut *> list;
 		vector<string> attribut = splitLine(line, ';');
 		string nomMaladie = attribut[attribut.size() - 1];
-		n[nomMaladie]++;
+		nombrePresenceMaladie[nomMaladie]++;
 		int ID = stoi(attribut[0]);
-		sum[nomMaladie].push_back(ID);
+		sommeDonneesAttribut[nomMaladie].push_back(ID);
 		stringMoy[nomMaladie].push_back("!");
 
 		for (int i = 1; i < attribut.size() - 1; i++)
 		{
-			sum[nomMaladie].push_back(0);
+			sommeDonneesAttribut[nomMaladie].push_back(0);
 			stringMoy[nomMaladie].push_back("!");
 		}
 		for (int i = 1; i < attribut.size() - 1; i++)
 		{
 			if (Empreinte::modele[i - 1] == 1)
 			{
-				sum[nomMaladie][i] += stod(attribut[i]);
+				sommeDonneesAttribut[nomMaladie][i] += stod(attribut[i]);
 			}
 			else if (Empreinte::modele[i - 1] == 0)
 			{
-				sum[nomMaladie][i] = -1;
+				sommeDonneesAttribut[nomMaladie][i] = -1;
 				stringMoy[nomMaladie][i] = attribut[i];
 			}
 		}
 	}
 	is.close();
-	for (auto i = n.begin(); i != n.end(); ++i)
+	for (auto i = nombrePresenceMaladie.begin(); i != nombrePresenceMaladie.end(); ++i)
 	{
 		vector<Attribut *> list;
 		string nomMaladie = i->first;
@@ -85,29 +85,29 @@ void GestionDonnees::genererListeMaladie()
 		{
 			if (Empreinte::modele[j] == 0)
 			{
-				Attribut *a = new AttributString(Empreinte::nomAttribut[j], stringMoy[nomMaladie][j + 1]);
-				list.push_back(a);
+				Attribut *attribut = new AttributString(Empreinte::nomAttribut[j], stringMoy[nomMaladie][j + 1]);
+				list.push_back(attribut);
 			}
 			else if (Empreinte::modele[j] == 1)
 			{
-				double moy = sum[nomMaladie][j + 1] / n[nomMaladie];
-				Attribut *a = new AttributDouble(Empreinte::nomAttribut[j], moy);
-				list.push_back(a);
+				double moy = sommeDonneesAttribut[nomMaladie][j + 1] / nombrePresenceMaladie[nomMaladie];
+				Attribut *attribut = new AttributDouble(Empreinte::nomAttribut[j], moy);
+				list.push_back(attribut);
 			}
 		}
-		Empreinte e(sum[nomMaladie][0], list);
-		Maladie m(nomMaladie, e);
-		listMaladie.push_back(m);
+		Empreinte empreinte(sommeDonneesAttribut[nomMaladie][0], list);
+		Maladie maladie(nomMaladie, empreinte);
+		listMaladie.push_back(maladie);
 	}
 }
 
 unordered_map<string, double> GestionDonnees::analyse(Empreinte e)
 {
 	unordered_map<string, double> resultat;
-	for (Maladie m : listMaladie)
+	for (Maladie maladie : listMaladie)
 	{
-		double probab = m.presence(e);
-		resultat.insert(make_pair(m.getNom(), probab));
+		double probab = maladie.presence(e);
+		resultat.insert(make_pair(maladie.getNom(), probab));
 	}
 
 	return resultat;
@@ -115,10 +115,10 @@ unordered_map<string, double> GestionDonnees::analyse(Empreinte e)
 
 void GestionDonnees::analyse(list<Empreinte> listeEmpreintes)
 {
-	for (Empreinte e : listeEmpreintes)
+	for (Empreinte empreinte : listeEmpreintes)
 	{
-		unordered_map<string, double> resultat = analyse(e);
-		cout << e.getID() << endl;
+		unordered_map<string, double> resultat = analyse(empreinte);
+		cout << empreinte.getID() << endl;
 		for (auto i = resultat.begin(); i != resultat.end(); ++i)
 		{
 			cout << "     Maladie: " << i->first << " | Probabilite: " << i->second << endl;
@@ -126,23 +126,23 @@ void GestionDonnees::analyse(list<Empreinte> listeEmpreintes)
 	}
 }
 
-void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte e)
+void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte empreinte)
 {
 	ofstream os;
 	os.open(FICHIER_MALADIE, ofstream::out | ofstream::app);
-	os << e.getID();
-	vector<Attribut *> listeAttributs = e.listeAttributs;
+	os << empreinte.getID();
+	vector<Attribut *> listeAttributs = empreinte.listeAttributs;
 	for (int i = 0; i < listeAttributs.size(); i++)
 	{
 		if (Empreinte::modele[i] == 0)
 		{
-			AttributString *as = dynamic_cast<AttributString *>(listeAttributs[i]);
-			os << ";" << as->getData();
+			AttributString *attributString = dynamic_cast<AttributString *>(listeAttributs[i]);
+			os << ";" << attributString->getData();
 		}
 		else
 		{
-			AttributDouble *ad = dynamic_cast<AttributDouble *>(listeAttributs[i]);
-			os << ";" << ad->getData();
+			AttributDouble *attributDouble = dynamic_cast<AttributDouble *>(listeAttributs[i]);
+			os << ";" << attributDouble->getData();
 		}
 	}
 	os << ";" << maladie << endl;
@@ -184,18 +184,18 @@ Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 			{
 				if (Empreinte::modele[i] == 0)
 				{
-					Attribut *a = new AttributString(Empreinte::nomAttribut[i], attribut[i + 1]);
-					liste.push_back(a);
+					Attribut *attribut = new AttributString(Empreinte::nomAttribut[i], attribut[i + 1]);
+					liste.push_back(attribut);
 				}
 				else if (Empreinte::modele[i] == 1)
 				{
-					int val = stod(attribut[i + 1]);
-					Attribut *a = new AttributDouble(Empreinte::nomAttribut[i], val);
-					liste.push_back(a);
+					int valeur = stod(attribut[i + 1]);
+					Attribut *attribut = new AttributDouble(Empreinte::nomAttribut[i], valeur);
+					liste.push_back(attribut);
 				}
 			}
-			Empreinte e(idEmpreinte, liste);
-			return e;
+			Empreinte empreinte(idEmpreinte, liste);
+			return empreinte;
 		}
 	}
 }
