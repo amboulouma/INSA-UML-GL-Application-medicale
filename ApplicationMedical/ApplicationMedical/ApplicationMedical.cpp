@@ -16,31 +16,29 @@ using namespace std;
 
 int main()
 {
-	vector<Attribut *> list1;
-	Attribut *a1 = new AttributString("A1", "False");
-	list1.push_back(a1);
-	Attribut *a2 = new AttributDouble("A2", 7.8);
-	list1.push_back(a2);
-	Attribut *a3 = new AttributDouble("A3", 80);
-	list1.push_back(a3);
-	Attribut *a4 = new AttributDouble("A4", 7.628);
-	list1.push_back(a4);
-	Attribut *a5 = new AttributDouble("AZ51", 68.5);
-	list1.push_back(a5);
-	Empreinte e(1, list1);
 
-	GestionDonnees gd;
+	// GestionDonnees gd;
 
-	unordered_map<string, double> res = gd.analyse(e);
-	gd.associerMaladieEmpreinte("Maladie1", e);
+	// unordered_map<string, double> res = gd.analyse(e);
+	// gd.associerMaladieEmpreinte("Maladie1", e);
 
-	Empreinte e1 = gd.trouverEmpreinteParID(2);
+	// Empreinte e1 = gd.trouverEmpreinteParID(2);
 
 	// Main
 
-	int choixMenu = 0, choixEmpreinte = 0;
+	int choixMenu = 0, choixEmpreinte = 0, choixAjoutMaladie = 0;
 	GestionDonnees gestionDonnees;
 	GestionDonnees gestionFichiers;
+
+	vector<Attribut *> listeAttributs;
+	Attribut *a1, *a2, *a3, *a4, *a5;
+
+	string attributString;
+	double attributDouble;
+
+	Empreinte empreinte;
+	int idEmpreinte = 1;
+	string maladie = "";
 
 	do
 	{
@@ -51,8 +49,7 @@ int main()
 		cout << "2- Afficher les maladies prises en compte" << endl;
 		cout << "3- Afficher les caractéristiques d'une maladie" << endl;
 		cout << "4- Ajouter une empreinte" << endl;
-		cout << "5- Associer une empreinte à une maladie" << endl;
-		cout << "6- Quitter" << endl;
+		cout << "5- Quitter" << endl;
 		cout << endl;
 		cout << "Entrez votre choix : ";
 		cin >> choixMenu;
@@ -108,20 +105,73 @@ int main()
 
 		case 3:
 			cout << "Afficher les caractéristiques d'une maladie" << endl;
+			cout << endl;
 
 			break;
 
 		case 4:
 			cout << "Ajouter une empreinte" << endl;
 
+			cout << "entrez l'attribut A1 : ";
+			cin >> attributString;
+			a1 = new AttributString("A1", attributString);
+			listeAttributs.push_back(a1);
+			cout << endl;
+
+			cout << "entrez l'attribut A2 : ";
+			cin >> attributDouble;
+			a2 = new AttributDouble("A2", attributDouble);
+			listeAttributs.push_back(a2);
+			cout << endl;
+
+			cout << "entrez l'attribut A3 : ";
+			cin >> attributDouble;
+			a3 = new AttributDouble("A3", attributDouble);
+			listeAttributs.push_back(a3);
+			cout << endl;
+
+			cout << "entrez l'attribut A4 : ";
+			cin >> attributDouble;
+			a4 = new AttributDouble("A4", attributDouble);
+			listeAttributs.push_back(a4);
+			cout << endl;
+
+			cout << "entrez l'attribut AZ51 : ";
+			cin >> attributDouble;
+			a5 = new AttributDouble("AZ51", attributDouble);
+			listeAttributs.push_back(a5);
+			cout << endl;
+
+			empreinte = Empreinte(idEmpreinte++, listeAttributs);
+			cout << "L'empreinte " << idEmpreinte << " a été ajoutée:" << endl;
+
+			cout << "Associer l'empreinte " << idEmpreinte << " à une maladie ?" << endl;
+			cout << "1- Oui" << endl;
+			cout << "2- Non" << endl;
+			cout << "Entrez votre choix : ";
+			cin >> choixEmpreinte;
+			switch (choixEmpreinte)
+			{
+			case 1:
+				cout << endl;
+				gestionDonnees.affichageMaladies();
+				cout << "Entrez nom de de la maladie :";
+				cin >> maladie;
+				gestionDonnees.associerMaladieEmpreinte(maladie, empreinte);
+				cout << "La maladie :" << maladie << " a bien été associée." << endl;
+				break;
+
+			case 2:
+				cout << "Vos modifications ont bien été appliqués." << endl;
+				break;
+
+			default:
+				cout << "Veuillez entrer un choix valide." << endl;
+				break;
+			}
 			break;
 
 		case 5:
-			cout << "Associer une empreinte à une maladie" << endl;
-
-			break;
-
-		case 6:
 			cout << "Vous avez quitté l'application." << endl;
 			break;
 

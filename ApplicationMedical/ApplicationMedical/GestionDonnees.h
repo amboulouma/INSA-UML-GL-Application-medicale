@@ -36,8 +36,7 @@ class GestionDonnees
 	void getModele(vector<int> &schema);
 	void affichageMaladies();
 
-	vector<string>
-	splitLine(string line, char separator);
+	vector<string> splitLine(string line, char separator);
 };
 
 #endif
