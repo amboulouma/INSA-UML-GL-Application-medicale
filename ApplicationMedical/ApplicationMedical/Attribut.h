@@ -10,11 +10,12 @@ using namespace std;
 
 class Attribut
 {
-  protected:
-	string nom;
+protected:
+  string nom;
+  const string FICHIER_LOGS = "logs.txt";
 
-  public:
-	virtual double distance(Attribut *attribut) = 0;
+public:
+  virtual double distance(Attribut *attribut) = 0;
 };
 
 #endif

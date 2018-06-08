@@ -24,6 +24,7 @@ class Empreinte
 	static const string FICHIER_METADONNEES;
 	static vector<int> modele;
 	static vector<string> nomAttribut;
+	const string FICHIER_LOGS = "logs.txt";
 
   public:
 	Empreinte();

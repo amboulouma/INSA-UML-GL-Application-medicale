@@ -14,12 +14,13 @@ using namespace std;
 
 class GestionDonnees
 {
-private:
+  private:
 	const string FICHIER_MALADIE = "Maladies.txt";
 	const string FICHIER_EMPREINTES = "Empreintes.txt";
+	const string FICHIER_LOGS = "logs.txt";
 	list<Maladie> listMaladie;
 
-public:
+  public:
 	GestionDonnees();
 
 	~GestionDonnees();

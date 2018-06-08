@@ -5,19 +5,28 @@ using namespace std;
 
 AttributDouble::AttributDouble()
 {
-	cout << "Construction d'un attribut double" << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Construction d'un attribut double" << endl;
+	os.close();
 }
 
 AttributDouble::AttributDouble(string nom, double data)
 {
-	cout << "Construction de l'attribut double : " << nom << ", " << data << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Construction de l'attribut double : " << nom << ", " << data << endl;
+	os.close();
 	this->nom = nom;
 	this->data = data;
 }
 
 AttributDouble::~AttributDouble()
 {
-	cout << "Destruction d'un attribut double" << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Destruction d'un attribut double" << endl;
+	os.close();
 }
 
 double AttributDouble::getData()
@@ -28,7 +37,10 @@ double AttributDouble::getData()
 double AttributDouble::distance(Attribut *attribut)
 {
 	AttributDouble *attributDouble = dynamic_cast<AttributDouble *>(attribut);
-	cout << "Calcule de la distance de l'attribut double : " << attributDouble->nom << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Calcule de la distance de l'attribut double : " << attributDouble->nom << endl;
+	os.close();
 	double distance = 0;
 	if (this->data - attributDouble->data > 0)
 	{

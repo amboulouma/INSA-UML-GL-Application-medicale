@@ -10,12 +10,19 @@ vector<string> Empreinte::nomAttribut;
 
 Empreinte::Empreinte()
 {
-	cout << "Construction d'une empreinte" << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Construction d'une empreinte" << endl;
+	os.close();
 }
 
 Empreinte::Empreinte(int id, vector<Attribut *> liste) : listeAttributs(liste)
 {
-	cout << "Construction de  l'empreinte : " << id << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Construction de  l'empreinte : " << id << endl;
+	os.close();
+
 	NoID = id;
 	if (Empreinte::modele.empty())
 	{
@@ -43,12 +50,18 @@ Empreinte::Empreinte(int id, vector<Attribut *> liste) : listeAttributs(liste)
 
 Empreinte::~Empreinte()
 {
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
 	cout << "Destruction de  l'empreinte" << endl;
+	os.close();
 }
 
 double Empreinte::distance(Empreinte empreinte)
 {
-	cout << "Calcule de la distance de  l'empreinte : " << empreinte->NoID << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Calcule de la distance de  l'empreinte : " << empreinte->NoID << endl;
+	os.close();
 	double distanceEmpreinte = 0;
 	vector<Attribut *> vecteurAttributs = empreinte.listeAttributs;
 	for (unsigned int i = 0; i < modele.size(); i++)
@@ -68,8 +81,11 @@ double Empreinte::distance(Empreinte empreinte)
 
 void Empreinte::sauvegarderEmpreinte()
 {
-	cout << "Sauvegarder l'empreinte" << endl;
 	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Sauvegarder l'empreinte" << endl;
+	os.close();
+
 	os.open(FICHIER_EMPREINTES, std::ofstream::out | std::ofstream::app);
 	os << NoID;
 	for (int i = 0; i < listeAttributs.size(); i++)

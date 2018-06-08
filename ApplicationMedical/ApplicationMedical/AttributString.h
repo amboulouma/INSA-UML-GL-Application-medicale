@@ -10,10 +10,10 @@ using namespace std;
 
 class AttributString : public Attribut
 {
-  private:
+private:
 	string data;
 
-  public:
+public:
 	AttributString();
 
 	AttributString(string nom, string data);

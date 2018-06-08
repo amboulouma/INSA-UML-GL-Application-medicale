@@ -14,11 +14,12 @@ class Maladie
 {
 	friend class GestionDonnees;
 
-private:
+  private:
 	string nom;
 	Empreinte empreinteMoyenne;
+	const string FICHIER_LOGS = "logs.txt";
 
-public:
+  public:
 	Maladie();
 
 	Maladie(string nom, Empreinte empreinteMoyenne);

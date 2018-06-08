@@ -3,24 +3,36 @@
 
 Maladie::Maladie()
 {
-	cout << "Construction d'une maladie" << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Construction d'une maladie" << endl;
+	os.close();
 }
 
 Maladie::Maladie(string nom, Empreinte empreinteMoyenne)
 {
-	cout << "Construction de la maladie : " << nom << ", " << empreinteMoyenne->NoID << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Construction de la maladie : " << nom << ", " << empreinteMoyenne->NoID << endl;
+	os.close();
 	this->nom = nom;
 	this->empreinteMoyenne = empreinteMoyenne;
 }
 
 Maladie::~Maladie()
 {
-	cout << "Destruction d'une maladie" << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Destruction d'une maladie" << endl;
+	os.close();
 }
 
 double Maladie::presence(Empreinte empreinte)
 {
-	cout << "Calcule de la présence de l'empreinte : " << empreinte->NoID << endl;
+	ofstream os;
+	os.open(FICHIER_LOGS, ofstream::out | ofstream::app);
+	os << "Calcule de la présence de l'empreinte : " << empreinte->NoID << endl;
+	os.close();
 	return 1 - this->empreinteMoyenne.distance(empreinte);
 }
 
