@@ -21,16 +21,15 @@ class GestionDonnees
 	vector<string> nomAttribut;
 	vector<int> modele;
 
-
   public:
 
 list<Maladie> listMaladie;
 	GestionDonnees();
 
 	~GestionDonnees();
-	
+
 	void defModele();
-	void calculerMaladies ();
+	void calculerMaladies();
 	void analyse(const Empreinte &Empreinte);
 	void analyse(list<Empreinte> listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
@@ -44,8 +43,9 @@ list<Maladie> listMaladie;
 
 	void setFichierMaladie(const string & fichierMaladie);
 	void setFichierEmpreintes(const string & fichierEmpreintes);
+	void affichageMaladies();
 
-	vector<string> splitLine(string line, char separator);
+	vector<string>splitLine(string line, char separator);
 };
 
 #endif

@@ -1,0 +1,510 @@
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 7.8
+Construction de l'attribut double : A3, 80
+Construction de l'attribut double : A4, 7.628
+Construction de l'attribut double : AZ51, 68.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.504
+Construction de l'attribut double : A2, 79.6
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 290.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.55333
+Construction de l'attribut double : A2, 79.6667
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 253.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 1
+Construction de l'attribut double : A3, 14
+Construction de l'attribut double : A4, 13
+Construction de l'attribut double : AZ51, 2367
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.55333
+Construction de l'attribut double : A2, 79.6667
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 253.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.55333
+Construction de l'attribut double : A2, 79.6667
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 253.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 7.8
+Construction de l'attribut double : A3, 80
+Construction de l'attribut double : A4, 7.628
+Construction de l'attribut double : AZ51, 68.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.55333
+Construction de l'attribut double : A2, 79.6667
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 253.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.58857
+Construction de l'attribut double : A2, 79.7143
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 227.071
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 1
+Construction de l'attribut double : A3, 14
+Construction de l'attribut double : A4, 13
+Construction de l'attribut double : AZ51, 2367
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.58857
+Construction de l'attribut double : A2, 79.7143
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 227.071
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.58857
+Construction de l'attribut double : A2, 79.7143
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 227.071
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 7.8
+Construction de l'attribut double : A3, 80
+Construction de l'attribut double : A4, 7.628
+Construction de l'attribut double : AZ51, 68.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.58857
+Construction de l'attribut double : A2, 79.7143
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 227.071
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.615
+Construction de l'attribut double : A2, 79.75
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 207.25
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 1
+Construction de l'attribut double : A3, 14
+Construction de l'attribut double : A4, 13
+Construction de l'attribut double : AZ51, 2367
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.615
+Construction de l'attribut double : A2, 79.75
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 207.25
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.615
+Construction de l'attribut double : A2, 79.75
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 207.25
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 7.8
+Construction de l'attribut double : A3, 80
+Construction de l'attribut double : A4, 7.628
+Construction de l'attribut double : AZ51, 68.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.615
+Construction de l'attribut double : A2, 79.75
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 207.25
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.63556
+Construction de l'attribut double : A2, 79.7778
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 191.833
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 1
+Construction de l'attribut double : A3, 14
+Construction de l'attribut double : A4, 13
+Construction de l'attribut double : AZ51, 2367
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.63556
+Construction de l'attribut double : A2, 79.7778
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 191.833
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.63556
+Construction de l'attribut double : A2, 79.7778
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 191.833
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 7.8
+Construction de l'attribut double : A3, 80
+Construction de l'attribut double : A4, 7.628
+Construction de l'attribut double : AZ51, 68.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.63556
+Construction de l'attribut double : A2, 79.7778
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 191.833
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.652
+Construction de l'attribut double : A2, 79.8
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 179.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 1
+Construction de l'attribut double : A3, 14
+Construction de l'attribut double : A4, 13
+Construction de l'attribut double : AZ51, 2367
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.652
+Construction de l'attribut double : A2, 79.8
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 179.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.652
+Construction de l'attribut double : A2, 79.8
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 179.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 7.8
+Construction de l'attribut double : A3, 80
+Construction de l'attribut double : A4, 7.628
+Construction de l'attribut double : AZ51, 68.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.652
+Construction de l'attribut double : A2, 79.8
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 179.5
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Calcule de la distance de l'attribut string : A1
+Calcule de la distance de l'attribut double : A2
+Calcule de la distance de l'attribut double : A3
+Calcule de la distance de l'attribut double : A4
+Calcule de la distance de l'attribut double : AZ51
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.66545
+Construction de l'attribut double : A2, 79.8182
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 169.409
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : A1, False
+Construction de l'attribut double : A2, 1
+Construction de l'attribut double : A3, 14
+Construction de l'attribut double : A4, 13
+Construction de l'attribut double : AZ51, 2367
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.66545
+Construction de l'attribut double : A2, 79.8182
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 169.409
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 7.66545
+Construction de l'attribut double : A2, 79.8182
+Construction de l'attribut double : A3, 7.628
+Construction de l'attribut double : A4, 169.409
+Construction de l'attribut string : NoID, False
+Construction de l'attribut double : A1, 1.1
+Construction de l'attribut double : A2, 14.3
+Construction de l'attribut double : A3, 13.2
+Construction de l'attribut double : A4, 2367
+Construction de l'attribut string : NoID, True
+Construction de l'attribut double : A1, 2.12
+Construction de l'attribut double : A2, 13
+Construction de l'attribut double : A3, 3.156
+Construction de l'attribut double : A4, 1236

@@ -20,16 +20,16 @@ private:
 	string ANALYSE_EMPREINTE = "Empreintes.txt";
 
 
-public:
+  public:
 	GestionFichier();
-	
+
 	~GestionFichier();
 
-	void ajouterDansBD(Empreinte &, string nomMaladie, vector<int>& modele);
+	void ajouterDansBD(Empreinte &, string nomMaladie, vector<int> &modele);
 
-	void modeleEmpreinte(vector<string>& nomAttribut, vector<int>& modele);
-	void lireBD(unordered_map<string,Empreinte>&,vector<int>& modele);
-	void GestionFichier::lireEmpreinte(vector<Empreinte>&, vector<int> modele, vector<string> nomAttribut);
+	void modeleEmpreinte(vector<string> &nomAttribut, vector<int> &modele);
+	void lireBD(unordered_map<string, Empreinte> &, vector<int> &modele);
+	void lireEmpreinte(vector<Empreinte> &, vector<int> modele, vector<string> nomAttribut);
 
 	vector<string> splitLine(string line, char separator);
 

@@ -12,6 +12,7 @@ class Attribut
 {
 	protected :
 		string nom;
+		const string FICHIER_LOGS = "logs.txt";
 
 	public :
 		virtual double distance(Attribut * attribut) = 0;

@@ -4,10 +4,11 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <set>
 
 using namespace std;
 
-GestionDonnees::GestionDonnees() 
+GestionDonnees::GestionDonnees()
 {
 	defModele();
 	calculerMaladies();
@@ -42,11 +43,12 @@ void GestionDonnees::calculerMaladies()
 }
 
 void GestionDonnees::analyse(const Empreinte &e)
+=======
 {
 	unordered_map<string, double> resultat;
-	for (Maladie m : listMaladie) 
+	for (Maladie m : listMaladie)
 	{
-		double probab = m.presence(e,modele);
+		double probab = m.presence(e, modele);
 		resultat.insert(make_pair(m.getNom(), probab));
 	}
 
@@ -57,7 +59,7 @@ void GestionDonnees::analyse(const Empreinte &e)
 	}
 }
 
-void GestionDonnees::analyse(list<Empreinte> listeEmpreintes)
+void GestionDonnees::analyse(const list<Empreinte> &listeEmpreintes)
 {
 	for (Empreinte e : listeEmpreintes)
 	{
@@ -84,29 +86,28 @@ Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 		if (idEmpreinte == id)
 		{
 			vector<string> attribut = splitLine(line, ';');
-			vector<Attribut*> liste;
+			vector<Attribut *> liste;
 			for (int i = 0; i < modele.size(); i++)
 			{
 				if (modele[i] == 0)
 				{
-					Attribut* a = new AttributString(nomAttribut[i],attribut[i+1]);
+					Attribut *a = new AttributString(nomAttribut[i], attribut[i + 1]);
 					liste.push_back(a);
 				}
 				else if (modele[i] == 1)
 				{
 					int val = stod(attribut[i + 1]);
-					Attribut* a = new AttributDouble(nomAttribut[i], val);
+					Attribut *a = new AttributDouble(nomAttribut[i], val);
 					liste.push_back(a);
 				}
 			}
 			Empreinte e(idEmpreinte, liste);
 			return e;
 		}
-		
 	}
 }
 
-void GestionDonnees::getMaladies(list<Maladie> & maladies)
+void GestionDonnees::getMaladies(list<Maladie> &maladies)
 {
 	list<Maladie>::iterator it;
 	for (it = listMaladie.begin(); it != listMaladie.end(); ++it)
@@ -115,7 +116,7 @@ void GestionDonnees::getMaladies(list<Maladie> & maladies)
 	}
 }
 
-void GestionDonnees::getModele(vector<int>& schema)
+void GestionDonnees::getModele(vector<int> &schema)
 {
 	vector<int>::iterator it;
 	for (it = modele.begin(); it != modele.end(); ++it)
@@ -153,10 +154,32 @@ void GestionDonnees::setFichierEmpreintes(const string & fichierEmpreintes)
 	FICHIER_EMPREINTES = fichierEmpreintes;
 }
 
+void GestionDonnees::affichageMaladies()
+{
+	ifstream is;
+	is.open(FICHIER_MALADIE);
+	set<string> maladies;
+	set<string>::iterator it;
+	string line;
+	vector<string> tuple;
+	if (is.is_open())
+	{
+		getline(is, line);
+		while (getline(is, line))
+		{
+			tuple = splitLine(line, ';');
+			maladies.insert(*(tuple.end() - 1));
+		}
+		for (it = maladies.begin(); it != maladies.end(); ++it)
+			std::cout << *it << endl;
+	}
+	is.close();
+}
+
 vector<string> GestionDonnees::splitLine(string line, char c = ' ')
 {
 	vector<string> result;
-	const char* str = line.c_str();
+	const char *str = line.c_str();
 	do
 	{
 		const char *begin = str;
