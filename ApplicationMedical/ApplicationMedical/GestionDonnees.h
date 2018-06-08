@@ -17,13 +17,12 @@ class GestionDonnees
   private:
 	string FICHIER_MALADIE = "Maladies.txt";
 	string FICHIER_EMPREINTES = "Empreintes.txt";
-	
+
 	vector<string> nomAttribut;
 	vector<int> modele;
 
   public:
-
-list<Maladie> listMaladie;
+	list<Maladie> listMaladie;
 	GestionDonnees();
 
 	~GestionDonnees();
@@ -34,18 +33,18 @@ list<Maladie> listMaladie;
 	void analyse(const list<Empreinte>& listeEmpreintes);
 	void associerMaladieEmpreinte(string maladie, Empreinte e);
 	Empreinte trouverEmpreinteParID(int id);
-	void getMaladies(list<Maladie> & maladies);
-	void getModele(vector<int> & schema);
-	void getNomsAttributs(vector<string> & noms);
+	void getMaladies(list<Maladie> &maladies);
+	void getModele(vector<int> &schema);
+	void getNomsAttributs(vector<string> &noms);
 
 	string getFichierMaladie();
 	string getFichierEmpreintes();
 
-	void setFichierMaladie(const string & fichierMaladie);
-	void setFichierEmpreintes(const string & fichierEmpreintes);
+	void setFichierMaladie(const string &fichierMaladie);
+	void setFichierEmpreintes(const string &fichierEmpreintes);
 	void affichageMaladies();
 
-	vector<string>splitLine(string line, char separator);
+	vector<string> splitLine(string line, char separator);
 };
 
 #endif

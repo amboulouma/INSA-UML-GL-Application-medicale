@@ -25,7 +25,7 @@ void GestionDonnees::defModele()
 
 void GestionDonnees::calculerMaladies()
 {
-	
+
 	GestionFichier gf;
 	listMaladie.clear();
 	unordered_map<string, Empreinte> liste;
@@ -35,7 +35,6 @@ void GestionDonnees::calculerMaladies()
 		Maladie m(i->first, i->second);
 		listMaladie.push_back(m);
 	}
-	
 }
 
 void GestionDonnees::analyse(const Empreinte &e)
@@ -54,7 +53,7 @@ void GestionDonnees::analyse(const Empreinte &e)
 	}
 }
 
-void GestionDonnees::analyse(const list<Empreinte> &listeEmpreintes)
+void GestionDonnees::analyse(const list<Empreinte> listeEmpreintes)
 {
 	for (Empreinte e : listeEmpreintes)
 	{
@@ -120,7 +119,7 @@ void GestionDonnees::getModele(vector<int> &schema)
 	}
 }
 
-void GestionDonnees::getNomsAttributs(vector<string>& noms)
+void GestionDonnees::getNomsAttributs(vector<string> &noms)
 {
 	vector<string>::iterator it;
 	for (it = nomAttribut.begin(); it != nomAttribut.end(); ++it)
@@ -139,12 +138,12 @@ string GestionDonnees::getFichierEmpreintes()
 	return FICHIER_EMPREINTES;
 }
 
-void GestionDonnees::setFichierMaladie(const string & fichierMaladie)
+void GestionDonnees::setFichierMaladie(const string &fichierMaladie)
 {
 	FICHIER_MALADIE = fichierMaladie;
 }
 
-void GestionDonnees::setFichierEmpreintes(const string & fichierEmpreintes)
+void GestionDonnees::setFichierEmpreintes(const string &fichierEmpreintes)
 {
 	FICHIER_EMPREINTES = fichierEmpreintes;
 }
