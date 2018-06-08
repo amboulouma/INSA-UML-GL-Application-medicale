@@ -7,11 +7,15 @@ AttributDouble::AttributDouble() {}
 
 AttributDouble::AttributDouble(string nom, double data)
 {
+	cout << "Construction de l'attribut double : " << nom << ", " << data << endl;
 	this->nom = nom;
 	this->data = data;
 }
 
-AttributDouble::~AttributDouble() {}
+AttributDouble::~AttributDouble()
+{
+	cout << "Construction d'un arrtibut double" << endl;
+}
 
 double AttributDouble::getData()
 {
@@ -20,15 +24,16 @@ double AttributDouble::getData()
 
 double AttributDouble::distance(Attribut *attribut)
 {
-	AttributDouble *ad = dynamic_cast<AttributDouble *>(attribut);
+	AttributDouble *attributDouble = dynamic_cast<AttributDouble *>(attribut);
+	cout << "Calcule de la distance de l'attribut double : " << attributDouble->nom << endl;
 	double distance = 0;
-	if (this->data - ad->data > 0)
+	if (this->data - attributDouble->data > 0)
 	{
-		distance = (this->data - ad->data) / ad->data;
+		distance = (this->data - attributDouble->data) / attributDouble->data;
 	}
-	else if (ad->data - this->data > 0)
+	else if (attributDouble->data - this->data > 0)
 	{
-		distance = 2 * (ad->data - this->data) / ad->data;
+		distance = 2 * (attributDouble->data - this->data) / attributDouble->data;
 	}
 
 	if (distance > 1.0)

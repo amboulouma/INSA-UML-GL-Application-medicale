@@ -14,14 +14,11 @@ class Maladie
 {
 	friend class GestionDonnees;
 
-  private:
+private:
 	string nom;
-
 	Empreinte empreinteMoyenne;
 
-	int n;
-
-  public:
+public:
 	Maladie();
 
 	Maladie(string nom, Empreinte empreinteMoyenne);

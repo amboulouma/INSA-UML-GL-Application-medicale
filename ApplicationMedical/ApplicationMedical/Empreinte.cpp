@@ -8,10 +8,14 @@ const string Empreinte::FICHIER_EMPREINTES = "Empreintes.txt";
 vector<int> Empreinte::modele;
 vector<string> Empreinte::nomAttribut;
 
-Empreinte::Empreinte() {}
+Empreinte::Empreinte()
+{
+	cout << "Construction d'une empreinte" << endl;
+}
 
 Empreinte::Empreinte(int id, vector<Attribut *> liste) : listeAttributs(liste)
 {
+	cout << "Construction de  l'empreinte : " << id << endl;
 	NoID = id;
 	if (Empreinte::modele.empty())
 	{
@@ -39,21 +43,23 @@ Empreinte::Empreinte(int id, vector<Attribut *> liste) : listeAttributs(liste)
 
 Empreinte::~Empreinte()
 {
+	cout << "Destruction de  l'empreinte" << endl;
 }
 
-double Empreinte::distance(Empreinte e)
+double Empreinte::distance(Empreinte empreinte)
 {
+	cout << "Calcule de la distance de  l'empreinte : " << empreinte->NoID << endl;
 	double distanceEmpreinte = 0;
-	vector<Attribut *> list1 = e.listeAttributs;
+	vector<Attribut *> vecteurAttributs = empreinte.listeAttributs;
 	for (unsigned int i = 0; i < modele.size(); i++)
 	{
 		if (modele[i] == 0)
 		{
-			distanceEmpreinte = distanceEmpreinte + listeAttributs[i]->distance(list1[i]);
+			distanceEmpreinte = distanceEmpreinte + listeAttributs[i]->distance(vecteurAttributs[i]);
 		}
 		else
 		{
-			distanceEmpreinte = distanceEmpreinte + listeAttributs[i]->distance(list1[i]);
+			distanceEmpreinte = distanceEmpreinte + listeAttributs[i]->distance(vecteurAttributs[i]);
 		}
 	}
 	distanceEmpreinte = distanceEmpreinte / modele.size();
@@ -69,13 +75,13 @@ void Empreinte::sauvegarderEmpreinte()
 	{
 		if (modele[i] == 0)
 		{
-			AttributString *as = dynamic_cast<AttributString *>(listeAttributs[i]);
-			os << ";" << as->getData();
+			AttributString *attributString = dynamic_cast<AttributString *>(listeAttributs[i]);
+			os << ";" << attributString->getData();
 		}
 		else
 		{
-			AttributDouble *ad = dynamic_cast<AttributDouble *>(listeAttributs[i]);
-			os << ";" << ad->getData();
+			AttributDouble *attributDouble = dynamic_cast<AttributDouble *>(listeAttributs[i]);
+			os << ";" << attributDouble->getData();
 		}
 	}
 	os << endl;

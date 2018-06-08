@@ -8,18 +8,23 @@ using namespace std;
 
 GestionDonnees::GestionDonnees()
 {
+	cout << "Construction du gestionnaire de données" << endl;
 	genererListeMaladie();
 }
 
-GestionDonnees::~GestionDonnees() {}
+GestionDonnees::~GestionDonnees()
+{
+	cout << "Destruction du gestionnaire de données" << endl;
+}
 
 void GestionDonnees::genererListeMaladie()
 {
 	if (Empreinte::modele.empty())
 	{
+		cout << "Génération de la liste de maladie" << endl;
 		string line;
-		ifstream is1(Empreinte::FICHIER_METADONNEES);
-		while (getline(is1, line))
+		ifstream is(Empreinte::FICHIER_METADONNEES);
+		while (getline(is, line))
 		{
 			int pos = line.find(';');
 			string type = line.substr(pos + 1);
@@ -35,7 +40,7 @@ void GestionDonnees::genererListeMaladie()
 				Empreinte::nomAttribut.push_back(nomAtt);
 			}
 		}
-		is1.close();
+		is.close();
 	}
 
 	listMaladie.clear();
@@ -101,12 +106,13 @@ void GestionDonnees::genererListeMaladie()
 	}
 }
 
-unordered_map<string, double> GestionDonnees::analyse(Empreinte e)
+unordered_map<string, double> GestionDonnees::analyse(Empreinte empreinte)
 {
+	cout << "Analyse de l'empreinte : " << empreinte->NoID << endl;
 	unordered_map<string, double> resultat;
 	for (Maladie maladie : listMaladie)
 	{
-		double probab = maladie.presence(e);
+		double probab = maladie.presence(empreinte);
 		resultat.insert(make_pair(maladie.getNom(), probab));
 	}
 
@@ -115,19 +121,21 @@ unordered_map<string, double> GestionDonnees::analyse(Empreinte e)
 
 void GestionDonnees::analyse(list<Empreinte> listeEmpreintes)
 {
+	cout << "Analyse de la liste d'empreintes : " << endl;
 	for (Empreinte empreinte : listeEmpreintes)
 	{
 		unordered_map<string, double> resultat = analyse(empreinte);
 		cout << empreinte.getID() << endl;
 		for (auto i = resultat.begin(); i != resultat.end(); ++i)
 		{
-			cout << "     Maladie: " << i->first << " | Probabilite: " << i->second << endl;
+			cout << "Maladie: " << i->first << ", Probabilite: " << i->second << endl;
 		}
 	}
 }
 
 void GestionDonnees::associerMaladieEmpreinte(string maladie, Empreinte empreinte)
 {
+	cout << "Association de maladie avec l'empreinte : " << maladie->nom << ", " << empreinte->NoID << endl;
 	ofstream os;
 	os.open(FICHIER_MALADIE, ofstream::out | ofstream::app);
 	os << empreinte.getID();
@@ -169,6 +177,7 @@ vector<string> GestionDonnees::splitLine(string line, char c = ' ')
 
 Empreinte GestionDonnees::trouverEmpreinteParID(int id)
 {
+	cout << "Recherche de l'empreinte : " << id << endl;
 	ifstream is(Empreinte::FICHIER_EMPREINTES);
 	string line;
 	getline(is, line);
